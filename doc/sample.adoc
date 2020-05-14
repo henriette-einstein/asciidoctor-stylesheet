@@ -43,7 +43,7 @@ This is an attribute reference {quick-uri}[which links this text to the Asciidoc
 
 === Math
 
-Find the area under the graph of stem:[\$y = x^2\$ between \$x= 1\$] and stem:[\$x = 2\$].
+Find the area under the graph of \$y = x^2\$ between \$x= 1\$ and \$x = 2\$.
 
 [stem]
 ++++
