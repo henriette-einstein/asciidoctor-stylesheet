@@ -1,0 +1,162 @@
+%lists {
+  .olist,
+  .ulist,
+  .dlist,
+  .hdlist {
+    .title {
+      @extend %blocktitle;
+    }
+  }
+
+  ul,
+  ol {
+    margin-left: 1.5em;
+  }
+  ul,
+  ol,
+  dl {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+    list-style-position: outside;
+    font-family: inherit;
+  }
+  ul li ul,
+  ul li ol,
+  ol li ul,
+  ol li ol {
+    margin-left: 1.25em;
+    margin-bottom: 0;
+    font-size: 1em;
+  }
+
+  .ol {
+    margin-left: $list-side-margin + emCalc(4px);
+  }
+
+  ul li ol {
+    margin-left: $list-side-margin;
+  }
+
+  dl {
+    dt {
+      font-weight: $global-weight-bold;
+      margin-bottom: 0.3125em;
+    }
+    dd {
+      margin-left: $definition-list-content-margin-left;
+      &:last-child,
+      &:last-child > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ol > li p,
+  ul > li p,
+  ul dd,
+  ol dd,
+  .olist .olist,
+  .ulist .ulist,
+  .ulist .olist,
+  .olist .ulist {
+    margin-bottom: $paragraph-margin-bottom / 2;
+  }
+
+  ul.checklist,
+  ul.none,
+  ol.none,
+  ul.no-bullet,
+  ol.no-bullet,
+  ol.unnumbered,
+  ul.unstyled,
+  ol.unstyled {
+    list-style-type: none;
+  }
+
+  ul.no-bullet,
+  ol.no-bullet,
+  ol.unnumbered {
+    margin-left: 0.625em;
+  }
+
+  ul.unstyled,
+  ol.unstyled {
+    margin-left: 0;
+  }
+
+  ul.checklist {
+    margin-left: emCalc(10px);
+  }
+
+  // use consistent size for checkbox
+  ul.checklist li > p:first-child > .fa-square-o:first-child,
+  ul.checklist li > p:first-child > .fa-check-square-o:first-child {
+    width: 1.25em;
+    font-size: 0.8em;
+    position: relative;
+    bottom: 0.125em;
+  }
+
+  ul.checklist li > p:first-child > input[type='checkbox']:first-child {
+    margin-right: 0.25em;
+  }
+
+  ul.inline {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    list-style: none;
+    margin: 0 0 $inline-list-bottom-margin (-$inline-list-item-spacing);
+  }
+
+  ul.inline > li {
+    margin-left: $inline-list-item-spacing;
+  }
+
+  // used when you need to style the term inline
+  // or should we name it "natural"?
+  .unstyled dl dt {
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @mixin ordered-list-type($class, $type) {
+    ol.#{$class} {
+      list-style-type: #{$type};
+    }
+  }
+
+  @include ordered-list-type(arabic, decimal);
+  @include ordered-list-type(decimal, decimal-leading-zero);
+  @include ordered-list-type(loweralpha, lower-alpha);
+  @include ordered-list-type(upperalpha, upper-alpha);
+  @include ordered-list-type(lowerroman, lower-roman);
+  @include ordered-list-type(upperroman, upper-roman);
+  @include ordered-list-type(lowergreek, lower-greek);
+  //@include ordered-list-type(armenian, armenian);
+  //@include ordered-list-type(georgian, georgian);
+}
+
+.hdlist > table,
+.colist > table {
+  border: 0;
+  background: none; // FIXME this wouldn't be required if a background was set on table.tableblock and not table
+  > tbody > tr {
+    background: none;
+  }
+}
+
+td.hdlist1,
+td.hdlist2 {
+  vertical-align: top;
+  padding: 0 calculateRem(10px);
+}
+
+td.hdlist1 {
+  font-weight: bold;
+  padding-bottom: $paragraph-margin-bottom;
+}

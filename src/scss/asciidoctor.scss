@@ -1,0 +1,22 @@
+/** Fonts */
+@import 'typefaces/asciidoctor';
+
+/** Components */
+@import 'components/all';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  tab-size: 4;
+  @extend %baselayout;
+  @extend %elements;
+}
+
+body.toc-left {
+  @extend %panellayout;
+}
+
+body.toc-right {
+  @extend %panellayout-toc-right;
+}

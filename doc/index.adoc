@@ -1,0 +1,13 @@
+= Customizable Asciidoctor Stylesheet
+Armin Pfarr <arp@henriette-einstein.com>
+:toc: left
+
+
+== Overview
+This project implements a CSS stylesheet for Asciidoctor.
+
+link:sample{outfilesuffix}[Example document]
+
+== Requirements
+
+include::_requirements.adoc[leveloffset=1]

@@ -1,0 +1,62 @@
+@import '../util/breakpoints';
+
+%section-title {
+  font-family: $heading-font-family;
+  color: $heading-font-color;
+  font-weight: $heading-font-weight;
+  line-height: 1.2;
+  word-spacing: -0.05em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  break-after: avoid;
+}
+
+@mixin heading($name: h2) {
+  %#{$name} {
+    @extend %section-title;
+    @content;
+  }
+  #{$name} {
+    @extend %#{$name};
+  }
+}
+
+@include heading(h2) {
+  font-size: 2.315em;
+  letter-spacing: -0.01em;
+}
+
+@include heading(h3) {
+  font-size: 1.6875em;
+}
+
+@include heading(h4) {
+  font-size: 1.4375em;
+}
+
+@include heading(h5) {
+  font-size: 1.125em;
+}
+@include heading(h6) {
+  font-size: 1em;
+}
+
+.sect1 h2,
+.sect2 h3,
+.sect3 h4,
+.sect4 h5,
+.sect5 h6 {
+  @extend %section-title;
+}
+
+.sect1 {
+  + .sect1 {
+    border-top: $sect-divider-size $sect-divider-style $sect-divider-color;
+  }
+}
+
+@include media-break(m) {
+  .sect1 {
+    padding-bottom: 1.25em;
+  }
+}

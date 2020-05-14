@@ -1,0 +1,180 @@
+@import '../util/breakpoints';
+
+%heading {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  font-style: normal;
+  color: $heading-font-color;
+  text-rendering: optimizeLegibility;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.0125em;
+}
+
+%subheading {
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  color: $heading-font-color;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  line-height: 1.45em;
+}
+
+%blocktitle {
+  @extend %subheading;
+  font-family: $blocktitle-font-family;
+  color: $blocktitle-font-color;
+  font-style: $blocktitle-font-style;
+  font-size: $blocktitle-font-size;
+
+  font-weight: $blocktitle-font-weight;
+  text-align: left;
+  font-size: 1rem;
+}
+
+// Parts
+
+%default-area {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  @include media-break(m) {
+    max-width: 95%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+%part {
+  @extend %default-area;
+
+  *zoom: 1;
+  position: relative;
+  &:after {
+    clear: both;
+  }
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  .stretch {
+    width: 100%;
+  }
+}
+
+%content {
+  @extend %part;
+  color: $content-font-color;
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+  margin-top: 1.25em;
+
+  .imageblock img,
+  .image > img {
+    height: auto;
+    max-width: 100%;
+  }
+  &:before {
+    content: none;
+  }
+}
+
+%header {
+  @extend %part;
+  > h1:first-child {
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 2.25rem;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    @extend %heading;
+    font-size: 2em;
+    // margin: 0.67em 0;
+  }
+  > h1:first-child {
+    color: $title-font-color;
+    @if $title-font-weight and $title-font-weight != $header-font-weight {
+      font-weight: $title-font-weight;
+    }
+    @if $title-font-size {
+      font-size: $title-font-size;
+    }
+    margin-top: 2.25rem;
+    margin-bottom: 0;
+
+    + #toc {
+      margin-top: 8px; // dependent on $header-line-height
+      border-top: $hr-border-width $hr-border-style $hr-border-color;
+    }
+  }
+  /**
+  > h1:first-child + #toc {
+    margin-top: 8px;
+    border-top: 1px solid #ddddd8;
+  }
+
+  > h1:only-child {
+    border-bottom: 1px solid #ddddd8;
+    padding-bottom: 8px;
+  }
+  */
+
+  .details {
+    border-bottom: 1px solid #ddddd8;
+    line-height: 1.45;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.25em;
+    color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-flow: row wrap;
+
+    span.email a {
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    br {
+      display: none;
+      + span:before {
+        content: '\00a0\2013\00a0';
+      }
+      + span.author:before {
+        // we can't prevent wrap before comma, so use middot instead
+        //content: ",\00a0";
+        //content: "\00a0\00b7\00a0";
+        content: '\00a0\22c5\00a0';
+        // FIXME darken the $aside-font-color
+        // color: $blockquote-font-color;
+      }
+      + span#revremark:before {
+        content: '\00A0|\00A0 ';
+      }
+    }
+
+    span#revnumber {
+      text-transform: capitalize;
+    }
+
+    #revnumber:after {
+      content: '\00A0';
+    }
+  }
+}
+
+%footnotes {
+  @extend %part;
+}
+
+%footer {
+  @extend %part;
+}
+
+%line-height {
+  line-height: $default-line-height;
+}

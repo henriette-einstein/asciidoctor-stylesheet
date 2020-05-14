@@ -1,0 +1,43 @@
+// Remove the unit from the number
+// see https://css-tricks.com/snippets/sass/strip-unit-function/
+//
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Defaults
+$browser-context: 16; // Pixel size for 1rem
+
+// Calculate the rem.
+// Asume 16px is one rem
+@function calculateRem($number) {
+  @if unit($number) != 'rem' {
+    $number: strip-unit($number) / $browser-context * 1rem;
+  }
+
+  // Turn 0rem into 0
+  @if $number == 0rem {
+    $number: 0;
+  }
+
+  @return $number;
+}
+
+/// Scales a color to be darker if it's light, or lighter if it's dark.
+/// Use this function to tint a color appropriate to its lightness.
+///
+/// @param {Color} $color - Color to scale.
+/// @param {Percentage} $scale [5%] - Amount to scale up or down.
+/// @param {Percentage} $threshold [40%] - Threshold of lightness to check against.
+///
+/// @returns {Color} A scaled color.
+@function smart-scale($color, $scale: 5%, $threshold: 40%) {
+  @if lightness($color) > $threshold {
+    $scale: -$scale;
+  }
+  @return scale-color($color, $lightness: $scale);
+}

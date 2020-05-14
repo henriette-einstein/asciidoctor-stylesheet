@@ -1,0 +1,61 @@
+@import 'common';
+
+%inline {
+  color: $default-font-color;
+  font-family: $default-font-family;
+  line-height: $default-line-height;
+  margin: 0;
+  a {
+    color: $link-font-color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $link-font-color-hover;
+    text-decoration: underline;
+  }
+  code,
+  kbd,
+  pre {
+    font-family: $monospace-font-family;
+  }
+  b,
+  strong {
+    font-weight: $default-font-weight-bold;
+  }
+
+  // Emphasized text
+  em,
+  i {
+    font-style: italic;
+    line-height: inherit;
+    em,
+    i {
+      font-style: normal;
+    }
+  }
+
+  // Strong text
+  strong,
+  b {
+    font-weight: $default-font-weight-bold;
+    line-height: inherit;
+  }
+
+  strong strong {
+    font-weight: normal;
+  }
+
+  // Small text
+  small {
+    font-size: $small-font-size;
+    line-height: inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    line-height: $default-line-height; // inherit?
+    font-size: 1em;
+    margin: 0;
+  }
+}

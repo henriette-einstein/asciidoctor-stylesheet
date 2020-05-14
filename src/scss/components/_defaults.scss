@@ -1,0 +1,127 @@
+@import '../util/calc.scss';
+
+$global-weight-bold: bold !default;
+$global-weight-normal: normal !default;
+
+$global-font-size: 100% !default;
+$global-line-height: 1.5 !default;
+
+$global-margin-top: 1rem !default;
+$global-margin-bottom: 0.5rem !default;
+
+$small-font-size: 60% !default;
+
+$panel-bg: #f8f8f7;
+$panel-font-color: rgba(0, 0, 0, 0.75);
+
+// Default font
+$default-font-family: 'Open Sans', Arial, Helvetica, sans-serif !default;
+$default-font-color: black !default;
+$default-font-weight: 300 !default;
+$default-font-weight-bold: 600 !default;
+
+// Default font for headings
+$default-headings-font-family: $default-font-family;
+
+// Default line-height
+$default-line-height: 1.6 !default;
+
+// Monospace font
+$monospace-font-family: 'Courier New', Courier, monospac e !default;
+$monospace-font-weight-bold: $default-font-weight-bold;
+
+// Body font
+//$body-font-color: $default-font-color !default;
+$paragraph-margin-bottom: 1.25em;
+$paragraph-font-size: 1.065rem;
+
+// Header
+$header-font-weight: 400 !default;
+
+// Lead
+$lead-font-size: 1.21875em;
+
+// Title of article or book
+$title-font-family: $default-headings-font-family !default;
+$title-font-color: $default-font-color !default;
+$title-font-weight: $default-font-weight !default;
+$title-font-size: 2.75em !default;
+
+// Section Headings
+$heading-font-family: $default-headings-font-family !default;
+$heading-font-color: #ba3925 !default;
+$heading-font-weight: 300 !default;
+
+// Subtitle
+$subtitle-font-family: $default-headings-font-family !default;
+$subtitle-font-color: #7a2518 !default;
+$subtitle-font-weight: 400 !default;
+
+// Block
+$block-margin-bottom: 0.25em;
+
+// Block title
+$blocktitle-font-family: $subtitle-font-family !default;
+$blocktitle-font-color: $subtitle-font-color !default;
+$blocktitle-font-weight: $subtitle-font-weight !default;
+$blocktitle-font-style: italic !default;
+$blocktitle-font-size: 2.3125em;
+
+$content-font-family: $default-font-family !default;
+$content-font-color: lighten($default-font-color, 20%) !default;
+
+// hr
+$hr-border-width: 1px;
+$hr-border-style: solid;
+$hr-border-color: lighten($default-font-color, 20%) !default;
+
+// link
+$link-font-color: #2156a5 !default;
+$link-font-color-hover: #1d4b8f !default;
+
+// content
+$content-line-height: $default-line-height;
+$content-font-size: 1em;
+
+// table
+$table-border-size: 1px;
+$table-head-font-weight: bold;
+$table-display: block;
+$table-border-color: #dedede !default;
+$table-header-background-color: #f7f8f7 !default;
+$table-stripe-background-color: #f7f8f7 !default;
+$table-font-color: rgba(0, 0, 0, 0.8) !default;
+$table-head-font-size: inherit;
+$table-head-font-color: rgba(0, 0, 0, 0.8) !default;
+$table-row-font-size: inherit;
+$table-line-height: 1.6;
+$table-head-bg: #f7f8f7;
+$table-even-row-bg: #f8f8f7;
+
+$sect-divider-size: 1px;
+$sect-divider-style: solid;
+$sect-divider-color: #e7e7e9;
+$hr-border-color: #dddddf;
+
+// TOC
+$toc-background-color: #f8f8f7 !default;
+$toc-border: 1px solid #e7e7e9 !default;
+$toc-padding-top: 1.25em !default;
+$toc-padding-bottom: 1.25em !default;
+$toc-padding-left: 1em !default;
+$toc-padding-right: 1em !default;
+
+// Lists
+
+$list-side-margin: calculateRem(24px);
+$list-nested-side-margin: 1.25em;
+$definition-list-header-margin-bottom: calculateRem(5px);
+$definition-list-margin-bottom: calculateRem(20px);
+$definition-list-content-margin-left: 1.25em;
+$inline-list-bottom-margin: 0;
+$inline-list-item-spacing: 0;
+
+// Common selectors
+$toc-selector: '#toc';
+$toctitle-selector: '#toctitle';
+$content-selector: '#content';
