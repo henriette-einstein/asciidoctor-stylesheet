@@ -10,7 +10,7 @@ const log = require('fancy-log')
 
 const SCSSFILES = 'src/scss/**/*.scss'
 const THEME = 'src/scss/asciidoctor.scss'
-const DEST = 'dest'
+const DEST = 'dist'
 
 /*
 function scss () {
@@ -55,7 +55,7 @@ function docTask (cb) {
   cb()
 }
 function docResourcesTask (cb) {
-  gulp.src('doc/resources/**/*.*')
+  gulp.src(['doc/**/*', '!doc/**/*.adoc'])
     .pipe(gulp.dest(DEST))
   cb()
 }

@@ -4,6 +4,9 @@
 /** Components */
 @import 'components/all';
 
+$default-font-family: $typeface-noto-serif;
+$heading-font-family: $typeface-open-sans;
+
 body {
   height: 100%;
   -moz-osx-font-smoothing: grayscale;
