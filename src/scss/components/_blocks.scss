@@ -4,21 +4,17 @@
   .imageblock,
   .literalblock,
   .listingblock,
+  .paragraph,
   .stemblock,
   .videoblock {
-    margin-bottom: $block-margin-bottom;
+    @extend %block;
   }
 
   .subheader,
   .admonitionblock td.content > .title,
-  .audioblock > .title,
   .exampleblock > .title,
   .imageblock > .title,
-  .listingblock > .title,
-  .literalblock > .title,
-  .stemblock > .title,
   .openblock > .title,
-  .paragraph > .title,
   .quoteblock > .title,
   table.tableblock > .title,
   .verseblock > .title,

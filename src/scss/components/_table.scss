@@ -2,10 +2,12 @@
 
 %table {
   table {
-    margin-bottom: 1.25em;
+    display: table;
+    margin-bottom: $block-margin-bottom;
     border-spacing: 0;
 
     tr {
+      display: table-row;
       th,
       td {
         display: table-cell;
@@ -27,12 +29,9 @@
   }
 
   table.tableblock {
+    @extend %block;
     max-width: 100%;
     border-collapse: separate;
-
-    > .title {
-      @extend %blocktitle;
-    }
   }
 
   p.tableblock:last-child {
@@ -129,7 +128,6 @@
     }
   }
 
-  // NOTE Fix required in Foundation, user-agent stylesheet is overriding
   table thead th,
   table tfoot th {
     font-weight: $table-head-font-weight;
@@ -160,109 +158,4 @@
   p.tableblock {
     font-size: 1em;
   }
-
-  //td > div.verse {
-  //  white-space: pre;
-  //}
-
-  /**
-  table.tableblock,
-  th.tableblock,
-  td.tableblock {
-    border: 0 solid #dedede;
-  }
-
-  table {
-    background: #fff;
-    margin-bottom: 1.25em;
-    border: solid 1px $table-border-color;
-
-    &.frame-all {
-      border-width: 1px;
-    }
-
-    &.frame-sides {
-      border-width: 0 1px;
-    }
-
-    &.frame-topbot {
-      border-width: 1px 0;
-    }
-
-    &.tableblock {
-      max-width: 100%;
-      border-collapse: separate;
-
-      td > .paragraph:last-child p > p:last-child,
-      th > p:last-child,
-      td > p:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &.grid-all {
-      thead > tr > .tableblock,
-      tbody > tr > .tableblock {
-        border-width: 0 1px 1px 0;
-      }
-      > thead:last-child > tr > .tableblock,
-      tbody > tr:last-child > .tableblock {
-        border-bottom-width: 0;
-      }
-      > * > tr > .tableblock:last-child {
-        border-right-width: 0;
-      }
-      tfoot > tr > .tableblock {
-        border-width: 1px 1px 0 0;
-      }
-    }
-
-    thead,
-    tfoot {
-      background: $table-header-background-color;
-      font-weight: $default-font-weight-bold;
-      tr {
-        td,
-        th {
-          padding: 0.5em 0.625em 0.625em;
-          font-size: inherit;
-          color: $table-font-color;
-          text-align: left;
-        }
-      }
-      th {
-        font-weight: $default-font-weight-bold;
-      }
-    }
-
-    tr th,
-    tr td {
-      padding: 0.5625em 0.625em;
-      font-size: inherit;
-      color: $table-font-color;
-    }
-  }
-
-  th,
-  td {
-    &.halign-left {
-      text-align: left;
-    }
-    &.halign-right {
-      text-align: right;
-    }
-    &.halign-center {
-      text-align: center;
-    }
-    &.valign-top {
-      vertical-align: top;
-    }
-    &.valign-bottom {
-      vertical-align: bottom;
-    }
-    &.valign-middle {
-      vertical-align: middle;
-    }
-  }
-*/
 }

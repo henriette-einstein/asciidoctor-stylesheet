@@ -1,13 +1,7 @@
 @import '../util/calc.scss';
 
-$global-weight-bold: bold !default;
-$global-weight-normal: normal !default;
-
-$global-font-size: 100% !default;
-$global-line-height: 1.5 !default;
-
-$global-margin-top: 1rem !default;
-$global-margin-bottom: 0.5rem !default;
+//$global-margin-top: 1rem !default;
+//$global-margin-bottom: 0.5rem !default;
 
 $small-font-size: 60% !default;
 
@@ -24,14 +18,13 @@ $default-font-weight-bold: 600 !default;
 $default-headings-font-family: $default-font-family;
 
 // Default line-height
-$default-line-height: 1.6 !default;
 
 // Monospace font
 $monospace-font-family: 'Courier New', Courier, monospac e !default;
 $monospace-font-weight-bold: $default-font-weight-bold;
 
-// Body font
-//$body-font-color: $default-font-color !default;
+$default-line-height: 1.6 !default;
+
 $paragraph-margin-bottom: 1.25em;
 $paragraph-font-size: 1.065rem;
 
