@@ -2,10 +2,14 @@ const gulp = require('gulp')
 const sass = require('gulp-dart-sass')
 // const cleanCSS = require('gulp-clean-css')
 
-const autoprefixer = require('gulp-autoprefixer')
+const autoprefixer = require('autoprefixer')
 // const changed = require('gulp-changed')
 // const del = require('del')
 const asciidoc = require('@asciidoctor/gulp-asciidoctor')
+const postCSS = require('gulp-postcss')
+const atimport = require('postcss-import')
+const inlinesvg = require('postcss-inline-svg')
+
 const log = require('fancy-log')
 
 const SCSSFILES = 'src/scss/**/*.scss'
@@ -27,12 +31,18 @@ function scss () {
 */
 
 function scssTask (cb) {
+  const plugins = [
+    atimport,
+    inlinesvg,
+    autoprefixer({ cascade: false })
+  ]
   gulp.src(THEME)
-    .pipe(sass()
+    .pipe(sass.sync()
       .on('error', sass.logError))
     // .pipe(cleanCSS())
-    .pipe(autoprefixer())
+    .pipe(postCSS(plugins))
     .pipe(gulp.dest(DEST))
+
   cb()
 }
 

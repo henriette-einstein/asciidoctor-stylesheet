@@ -39,6 +39,19 @@ $panel-padding: calculateRem(20) !default;
   }
 }
 
+@mixin svg-before($icon, $fill: 'black') {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+  content: '\00a0';
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-right: 0.2em;
+  background-image: svg-load($icon, fill=$fill);
+}
+
 %blocks {
   details,
   .audioblock,
@@ -230,30 +243,25 @@ $panel-padding: calculateRem(20) !default;
         cursor: default;
       }
 
-      .icon-note:before {
-        content: '\f05a';
-        color: #111;
+      .icon-note::before {
+        @include svg-before('../svg/info-circle.svg', #111);
       }
 
       .icon-tip:before {
-        content: '\f0eb';
-        text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
-        color: #19407c;
+        @include svg-before('../svg/lightbulb.svg', #19407c);
       }
 
       .icon-warning:before {
-        content: '\f071';
+        @include svg-before('../svg/exclamation-triangle.svg', #bf6900);
         color: #bf6900;
       }
 
       .icon-caution:before {
-        content: '\f06d';
-        color: #bf3400;
+        @include svg-before('../svg/hand-paper.svg', #bf3400);
       }
 
       .icon-important:before {
-        content: '\f06a';
-        color: #bf0000;
+        @include svg-before('../svg/exclamation-circle.svg', #bf0000);
       }
     }
 
