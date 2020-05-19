@@ -16,7 +16,13 @@
     font-size: $lead-font-size;
   }
 
-  .paragraph > .title {
-    @extend %blocktitle;
+  .paragraph {
+    margin-bottom: $paragraph-margin-bottom;
+    > .title {
+      @extend %blocktitle;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 }

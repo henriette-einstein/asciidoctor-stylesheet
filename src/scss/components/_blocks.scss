@@ -1,10 +1,50 @@
+$panel-border-style: solid !default;
+$panel-border-size: 1px !default;
+
+// We use these to set default inner padding and bottom margin
+$panel-margin-bottom: calculateRem(20) !default;
+$panel-padding: calculateRem(20) !default;
+
+@mixin panel($bg: $panel-bg, $padding: $panel-padding, $border: true) {
+  @if $bg {
+    $bg-lightness: lightness($bg);
+
+    @if $border {
+      border-style: $panel-border-style;
+      border-width: $panel-border-size;
+      border-color: $panel-border-color;
+      box-shadow: 5px 5px 5px lighten($panel-border-color, 5%);
+    } @else {
+      border-style: none;
+      border-width: 0;
+    }
+
+    margin-bottom: $panel-margin-bottom;
+    padding: $padding;
+
+    background: $bg;
+    @if $bg-lightness >= 50% {
+      color: $panel-font-color;
+    } @else {
+      color: $panel-font-color-alt;
+    }
+
+    // Respect the padding, fool.
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 %blocks {
   details,
   .audioblock,
   .imageblock,
   .literalblock,
   .listingblock,
-  .paragraph,
   .stemblock,
   .videoblock {
     @extend %block;
@@ -16,9 +56,220 @@
   .imageblock > .title,
   .openblock > .title,
   .quoteblock > .title,
-  table.tableblock > .title,
   .verseblock > .title,
   .videoblock > .title {
     @extend %blocktitle;
+  }
+
+  .exampleblock > .content {
+    @include panel($exampleblock-bg, $panel-padding, true);
+  }
+
+  .listingblock > .content {
+    @include panel($codeblock-bg, $panel-padding, false);
+  }
+
+  .exampleblock > .content,
+  .sidebarblock > .content {
+    // FIXME argh, review!
+    > :last-child > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .sidebarblock {
+    > .content {
+      @include panel($sidebarblock-bg, $panel-padding, true);
+      > .title {
+        @extend %blocktitle;
+      }
+    }
+  }
+
+  .quoteblock,
+  .verseblock {
+    .attribution {
+      font-size: $blockquote-cite-font-size;
+      line-height: 1.45;
+      font-style: italic;
+      br {
+        display: none;
+      }
+      cite {
+        display: block;
+        //letter-spacing: -0.05em;
+        letter-spacing: -0.025em;
+        color: $blockquote-cite-font-color;
+      }
+    }
+  }
+
+  .quoteblock {
+    margin: 0 1em $paragraph-margin-bottom 1.5em;
+    display: table; // enables auto width
+    &:not(.excerpt) > .title {
+      margin-left: -1.5em;
+      margin-bottom: 0.75em;
+    }
+    .attribution {
+      margin-top: 0.75em;
+      margin-right: 0.5ex;
+      text-align: right;
+    }
+
+    blockquote,
+    p {
+      color: $blockquote-font-color;
+      font-size: 1.15rem;
+      line-height: 1.75;
+      word-spacing: 0.1em;
+      letter-spacing: 0;
+      font-style: italic;
+      text-align: justify;
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      border: 0;
+
+      &:before {
+        content: '\201c';
+        float: left;
+        //font-size: 3em;
+        font-size: 2.75em;
+        font-weight: bold;
+        line-height: 0.6em; // use 0.67em if font-weight: normal
+        margin-left: -0.6em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      > .paragraph:last-child p {
+        margin-bottom: 0;
+      }
+      &.abstract,
+      &.excerpt,
+      .quoteblock {
+        blockquote {
+          &:before {
+            display: none;
+          }
+        }
+
+        blockquote,
+        p {
+          line-height: 1.6;
+          word-spacing: 0;
+        }
+      }
+
+      &.abstract {
+        margin: 0 1em $paragraph-margin-bottom 1em;
+        display: block;
+        > .title {
+          margin: 0 0 0.375em 0;
+          font-size: 1.15em;
+          text-align: center;
+        }
+      }
+    }
+    &.excerpt > blockquote,
+    .quoteblock {
+      padding: 0 0 0.25em 1em;
+      border-left: 0.25em solid $hr-border-color;
+    }
+
+    &.excerpt,
+    .quoteblock {
+      margin-left: 0;
+      blockquote,
+      p {
+        //color: rgba(0, 0, 0, 0.6);
+        color: inherit;
+        font-size: 1.0625rem;
+      }
+      .attribution {
+        //color: rgba(0, 0, 0, 0.6);
+        color: inherit;
+        text-align: left;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .verseblock {
+    //margin: 0 0.5em $paragraph-margin-bottom 0.5em;
+    margin: 0 1em $paragraph-margin-bottom 1em;
+    pre {
+      // FIXME make me a variable
+      font-family: 'Open Sans', 'DejaVu Sans', sans;
+      font-size: 1.15rem;
+      color: $blockquote-font-color;
+      font-weight: 300;
+      text-rendering: optimizeLegibility;
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    .attribution {
+      margin-top: 1.25rem;
+      margin-left: 0.5ex;
+    }
+  }
+
+  .admonitionblock > table {
+    border-collapse: separate;
+    border: 0;
+    background: none; // FIXME this wouldn't be required if a background was set on table.tableblock and not table
+    width: 100%;
+    td.icon {
+      [class^='fa icon-'] {
+        font-size: 2.5em;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        cursor: default;
+      }
+
+      .icon-note:before {
+        content: '\f05a';
+        color: #111;
+      }
+
+      .icon-tip:before {
+        content: '\f0eb';
+        text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
+        color: #19407c;
+      }
+
+      .icon-warning:before {
+        content: '\f071';
+        color: #bf6900;
+      }
+
+      .icon-caution:before {
+        content: '\f06d';
+        color: #bf3400;
+      }
+
+      .icon-important:before {
+        content: '\f06a';
+        color: #bf0000;
+      }
+    }
+
+    td.icon {
+      text-align: center;
+      // FIXME use ems!
+      width: 80px;
+      img {
+        max-width: none;
+      }
+      .title {
+        //font-weight: $header-font-weight;
+        font-weight: bold;
+        font-family: $heading-font-family;
+        text-transform: uppercase;
+      }
+    }
   }
 }

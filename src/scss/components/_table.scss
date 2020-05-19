@@ -32,6 +32,12 @@
     @extend %block;
     max-width: 100%;
     border-collapse: separate;
+
+    // trick to prevent caption from influencing width of an autowidth table
+    .fit-content > caption.title {
+      white-space: nowrap;
+      width: 0;
+    }
   }
 
   p.tableblock:last-child {

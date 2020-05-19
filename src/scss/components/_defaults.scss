@@ -5,8 +5,14 @@
 
 $small-font-size: 60% !default;
 
-$panel-bg: #f8f8f7;
+// Panels
+$panel-bg: #f3f3f2;
+$panel-border-color: lighten(black, 85%);
 $panel-font-color: rgba(0, 0, 0, 0.75);
+
+$sidebarblock-bg: darken($panel-bg, 2%);
+$exampleblock-bg: #fffef7;
+$codeblock-bg: $panel-bg;
 
 // Default font
 $default-font-family: 'Open Sans', Arial, Helvetica, sans-serif !default;
@@ -25,7 +31,7 @@ $monospace-font-weight-bold: $default-font-weight-bold;
 
 $default-line-height: 1.6 !default;
 
-$paragraph-margin-bottom: 1.25em;
+$paragraph-margin-bottom: 0.25em;
 $paragraph-font-size: 1.065rem;
 
 // Header
@@ -51,7 +57,7 @@ $subtitle-font-color: #7a2518 !default;
 $subtitle-font-weight: 400 !default;
 
 // Block
-$block-margin-bottom: 0.25em;
+$block-margin-bottom: 1.25em;
 
 // Block title
 $blocktitle-font-family: $subtitle-font-family !default;
@@ -62,6 +68,12 @@ $blocktitle-font-size: 2.3125em;
 
 $content-font-family: $default-font-family !default;
 $content-font-color: lighten($default-font-color, 20%) !default;
+
+// Blockquotes
+
+$blockquote-font-color: $title-font-color;
+$blockquote-cite-font-color: rgba(0, 0, 0, 0.6);
+$blockquote-cite-font-size: calculateRem(15px);
 
 // hr
 $hr-border-width: 1px;
