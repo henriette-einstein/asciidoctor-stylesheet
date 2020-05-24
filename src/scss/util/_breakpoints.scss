@@ -10,7 +10,7 @@ $breakpoints: (
   @if map-has-key($breakpoints, $value) {
     $key: $value;
   }
-  @media (min-width: #{map-get($breakpoints, $key)}) {
+  @media only screen and (min-width: #{map-get($breakpoints, $key)}) {
     @content;
   }
 }

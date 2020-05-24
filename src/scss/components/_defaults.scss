@@ -1,5 +1,33 @@
 @import '../util/calc.scss';
 
+// Fonts
+$default-font-family: 'Lora', serif;
+$heading-font-family: 'Open Sans', sans-serif;
+$mono-font-family: 'Roboto Mono', monospace;
+$ansi-safety-word-font: 'Open Sans', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Colors
+$color-heading: #0f4c81 !default; // was  #ba3925
+$color-title: #658dc6 !default; // was #7a2518
+$color-default: lighten(black, 5%) !default; // was black
+
+// Ansi colors
+$ansi-red: #c8102e;
+$ansi-orange: #ff8200;
+$ansi-yellow: #ffd100;
+$ansi-green: #007b5f;
+$ansi-blue: #0072ce;
+$ansi-purple: #6d2077;
+
+%body-font {
+  font-family: $default-font-family;
+  font-weight: $font-weight-normal;
+  color: $color-default;
+}
+
 //$global-margin-top: 1rem !default;
 //$global-margin-bottom: 0.5rem !default;
 
@@ -14,21 +42,6 @@ $sidebarblock-bg: darken($panel-bg, 2%);
 $exampleblock-bg: #fffef7;
 $codeblock-bg: $panel-bg;
 
-// Default font
-$default-font-family: 'Open Sans', Arial, Helvetica, sans-serif !default;
-$default-font-color: black !default;
-$default-font-weight: 300 !default;
-$default-font-weight-bold: 600 !default;
-
-// Default font for headings
-$default-headings-font-family: $default-font-family;
-
-// Default line-height
-
-// Monospace font
-$monospace-font-family: 'Courier New', Courier, monospac e !default;
-$monospace-font-weight-bold: $default-font-weight-bold;
-
 $default-line-height: 1.6 !default;
 
 $paragraph-margin-bottom: 0.25em;
@@ -41,44 +54,37 @@ $header-font-weight: 400 !default;
 $lead-font-size: 1.21875em;
 
 // Title of article or book
-$title-font-family: $default-headings-font-family !default;
-$title-font-color: $default-font-color !default;
-$title-font-weight: $default-font-weight !default;
+$title-font-family: $heading-font-family !default;
+//$title-font-color: $default-font-color !default;
+$title-font-weight: $font-weight-normal !default;
 $title-font-size: 2.75em !default;
 
 // Section Headings
-$heading-font-family: $default-headings-font-family !default;
-$heading-font-color: #ba3925 !default;
 $heading-font-weight: 300 !default;
-
-// Subtitle
-$subtitle-font-family: $default-headings-font-family !default;
-$subtitle-font-color: #7a2518 !default;
-$subtitle-font-weight: 400 !default;
 
 // Block
 $block-margin-bottom: 1.25em;
 
 // Block title
-$blocktitle-font-family: $subtitle-font-family !default;
-$blocktitle-font-color: $subtitle-font-color !default;
-$blocktitle-font-weight: $subtitle-font-weight !default;
+$blocktitle-font-family: $title-font-family !default;
+$blocktitle-font-color: $color-title !default;
+$blocktitle-font-weight: $title-font-weight !default;
 $blocktitle-font-style: italic !default;
 $blocktitle-font-size: 2.3125em;
 
 $content-font-family: $default-font-family !default;
-$content-font-color: lighten($default-font-color, 20%) !default;
+$content-font-color: lighten($color-default, 20%) !default;
 
 // Blockquotes
 
-$blockquote-font-color: $title-font-color;
-$blockquote-cite-font-color: rgba(0, 0, 0, 0.6);
+$blockquote-font-color: $color-default;
+$blockquote-cite-font-color: lighten($blockquote-font-color, 50%);
 $blockquote-cite-font-size: calculateRem(15px);
 
 // hr
 $hr-border-width: 1px;
 $hr-border-style: solid;
-$hr-border-color: lighten($default-font-color, 20%) !default;
+$hr-border-color: lighten($color-default, 20%) !default;
 
 // link
 $link-font-color: #2156a5 !default;

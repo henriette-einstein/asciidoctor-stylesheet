@@ -1,7 +1,5 @@
 %inline {
-  color: $default-font-color;
-  // font-family: $default-font-family;
-  // line-height: $default-line-height;
+  color: $color-default;
   margin: 0;
   a {
     color: $link-font-color;
@@ -14,11 +12,11 @@
   code,
   kbd,
   pre {
-    font-family: $monospace-font-family;
+    font-family: $mono-font-family;
   }
   b,
   strong {
-    font-weight: $default-font-weight-bold;
+    font-weight: $font-weight-bold;
   }
 
   // Emphasized text
@@ -35,7 +33,7 @@
   // Strong text
   strong,
   b {
-    font-weight: $default-font-weight-bold;
+    font-weight: $font-weight-bold;
     line-height: inherit;
   }
 
