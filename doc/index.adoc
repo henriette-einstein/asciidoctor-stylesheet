@@ -11,3 +11,9 @@ link:sample{outfilesuffix}[Example document]
 == Requirements
 
 include::_requirements.adoc[leveloffset=1]
+
+== Configuration
+
+include::_configuration.adoc[leveloffset=1]
+
+

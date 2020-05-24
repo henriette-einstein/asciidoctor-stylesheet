@@ -1,13 +1,21 @@
-= Customization
+== Default Values
+
+|===
+| Name | Value 
+
+| default-line-height | 1.6em
+
+|===
 
 == Fonts
 
 |===
-| Name | Font | Weight 
+| Name | Default Value 
 
-| heading-font-family | OpenSans | 700 
-| body-font-family | Lora | 400 
-| mono-font-family | Roboto Mono | 400 
+| --default-font-family | Lora, serif
+| --heading-font-family | OpenSans, sans-serif
+| --mono-font-family | Roboto Mono, monospace
+| --ansi-font-family | OpenSans, sans-serif
 
 |===
 
@@ -15,13 +23,22 @@
 The colors used in the stylesheet are based on the https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Color of the year 2020].
 
 |===
-| Name | RGB | Description
+| Name | Default Value | Description
 
-| color-heading |#C9D8E7 | Color for Headings 
-| color-title | #889095 | Color for Titles
-| color-text | #3A4950 | Color for regular text
-| bg-panel | #E4E6E9 | Default panel background
-| bg-panel-example | #C1C3C7 | Background for example panels
+| --color-heading |#C9D8E7 | Color for Headings 
+| --color-title | #889095 | Color for Blocktitles
+| --color-text | #3A4950 | Color for regular text
+|===
+
+== Backgroud Colors
+
+|===
+| Name | Default Value | Description
+
+| --bg-body | white | Background color for the body 
+| --bg-table | white | Background color for tables
+| --bg-panel-default | #E4E6E9 | Default panel background
+| --bg-panel-example | #C1C3C7 | Background for example panels
 |===
 
 == Sizes, Weights and Colors
