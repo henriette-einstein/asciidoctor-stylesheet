@@ -10,9 +10,13 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 // Colors
-$color-heading: #ba3925 !default;
-$color-title: #7a2518 !default;
-$color-default: black !default;
+//$color-heading: #ba3925 !default;
+// $color-title: #7a2518 !default;
+// $color-default: black !default;
+
+$color-heading: #0f4c81 !default;
+$color-title: #658dc6 !default;
+$color-default: lighten(black, 5%) !default;
 
 // Ansi colors
 $ansi-red: #c8102e;
@@ -76,7 +80,7 @@ $title-font-size: 2.75em !default;
 
 // Section Headings
 // $heading-font-family: $default-headings-font-family !default;
-$heading-font-color: #ba3925 !default;
+// $heading-font-color: #ba3925 !default;
 $heading-font-weight: 300 !default;
 
 // Block
