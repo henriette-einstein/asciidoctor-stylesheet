@@ -3,7 +3,6 @@ const sass = require('gulp-dart-sass')
 // const cleanCSS = require('gulp-clean-css')
 
 const autoprefixer = require('autoprefixer')
-// const changed = require('gulp-changed')
 // const del = require('del')
 const asciidoc = require('@henriette-einstein/gulp-asciidoctor')
 const postCSS = require('gulp-postcss')
