@@ -42,7 +42,7 @@
 
 // Parts
 
-%default-area {
+%part {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -55,10 +55,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-}
-
-%part {
-  @extend %default-area;
   font-family: $default-font-family;
 
   *zoom: 1;
@@ -107,7 +103,7 @@
     // margin: 0.67em 0;
   }
   > h1:first-child {
-    color: $title-font-color;
+    color: $color-title;
     @if $title-font-weight and $title-font-weight != $header-font-weight {
       font-weight: $title-font-weight;
     }
