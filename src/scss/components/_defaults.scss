@@ -10,13 +10,9 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 // Colors
-//$color-heading: #ba3925 !default;
-// $color-title: #7a2518 !default;
-// $color-default: black !default;
-
-$color-heading: #0f4c81 !default;
-$color-title: #658dc6 !default;
-$color-default: lighten(black, 5%) !default;
+$color-heading: #0f4c81 !default; // was  #ba3925
+$color-title: #658dc6 !default; // was #7a2518
+$color-default: lighten(black, 5%) !default; // was black
 
 // Ansi colors
 $ansi-red: #c8102e;
@@ -46,21 +42,6 @@ $sidebarblock-bg: darken($panel-bg, 2%);
 $exampleblock-bg: #fffef7;
 $codeblock-bg: $panel-bg;
 
-// Body font
-//$default-font-family: 'Open Sans', Arial, Helvetica, sans-serif !default;
-//$body-font-color: black !default;
-//$body-font-weight: 400 !default;
-$body-font-weight-bold: 700 !default;
-
-// Default font for headings
-// $default-headings-font-family: $default-font-family;
-
-// Default line-height
-
-// Monospace font
-//$monospace-font-family: 'Courier New', Courier, monospac e !default;
-// $monospace-font-weight-bold: $default-font-weight-bold;
-
 $default-line-height: 1.6 !default;
 
 $paragraph-margin-bottom: 0.25em;
@@ -79,8 +60,6 @@ $title-font-weight: $font-weight-normal !default;
 $title-font-size: 2.75em !default;
 
 // Section Headings
-// $heading-font-family: $default-headings-font-family !default;
-// $heading-font-color: #ba3925 !default;
 $heading-font-weight: 300 !default;
 
 // Block

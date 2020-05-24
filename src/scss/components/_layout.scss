@@ -11,6 +11,7 @@
   font-family: $default-font-family;
 
   #{$toc-selector} {
+    margin-top: $block-margin-bottom;
     @extend %toc;
   }
   #header {
