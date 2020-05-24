@@ -4,6 +4,7 @@
 $default-font-family: 'Lora', serif;
 $heading-font-family: 'Open Sans', sans-serif;
 $mono-font-family: 'Roboto Mono', monospace;
+$ansi-safety-word-font: 'Open Sans', sans-serif;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
@@ -12,6 +13,14 @@ $font-weight-bold: 700;
 $color-heading: #ba3925 !default;
 $color-title: #7a2518 !default;
 $color-default: black !default;
+
+// Ansi colors
+$ansi-red: #c8102e;
+$ansi-orange: #ff8200;
+$ansi-yellow: #ffd100;
+$ansi-green: #007b5f;
+$ansi-blue: #0072ce;
+$ansi-purple: #6d2077;
 
 %body-font {
   font-family: $default-font-family;

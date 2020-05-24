@@ -244,24 +244,24 @@ $panel-padding: calculateRem(20) !default;
       }
 
       .icon-note::before {
-        @include svg-before('../svg/info-circle.svg', #111);
+        @include svg-before('../svg/info-circle.svg', $ansi-blue);
       }
 
       .icon-tip:before {
-        @include svg-before('../svg/lightbulb.svg', #19407c);
+        @include svg-before('../svg/lightbulb.svg', $ansi-green);
       }
 
       .icon-warning:before {
-        @include svg-before('../svg/exclamation-triangle.svg', #bf6900);
+        @include svg-before('../svg/exclamation-triangle.svg', $ansi-orange);
         color: #bf6900;
       }
 
       .icon-caution:before {
-        @include svg-before('../svg/hand-paper.svg', #bf3400);
+        @include svg-before('../svg/hand-paper.svg', $ansi-yellow);
       }
 
       .icon-important:before {
-        @include svg-before('../svg/exclamation-circle.svg', #bf0000);
+        @include svg-before('../svg/exclamation-circle.svg', $ansi-red);
       }
     }
 

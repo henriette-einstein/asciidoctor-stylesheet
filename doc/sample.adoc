@@ -220,16 +220,17 @@ This is a verse block.
 ____
 
 == Admonitions
-
-TIP: This is a tip. There are five admonition labels: Tip, Note, Important, Caution and Warning.
-
-NOTE: This is a note.
+There are five admonition labels: Tip, Note, Important, Caution and Warning.
 
 IMPORTANT: This is important.
 
+WARNING: This is a warning.
+
 CAUTION: Caution -- be careful!
 
-WARNING: This is a warning.
+NOTE: This is a note.
+
+TIP: This is a tip. 
 
 === Admonition blocks
 
