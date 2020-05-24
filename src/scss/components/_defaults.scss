@@ -94,8 +94,8 @@ $content-font-color: lighten($color-default, 20%) !default;
 
 // Blockquotes
 
-$blockquote-font-color: $color-title;
-$blockquote-cite-font-color: rgba(0, 0, 0, 0.6);
+$blockquote-font-color: $color-default;
+$blockquote-cite-font-color: lighten($blockquote-font-color, 50%);
 $blockquote-cite-font-size: calculateRem(15px);
 
 // hr

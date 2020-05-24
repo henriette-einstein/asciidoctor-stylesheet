@@ -75,7 +75,7 @@ $panel-padding: calculateRem(20) !default;
   }
 
   .exampleblock > .content {
-    @include panel($exampleblock-bg, $panel-padding, true);
+    @include panel($exampleblock-bg, $panel-padding, false);
   }
 
   .listingblock > .content {
@@ -92,7 +92,7 @@ $panel-padding: calculateRem(20) !default;
 
   .sidebarblock {
     > .content {
-      @include panel($sidebarblock-bg, $panel-padding, true);
+      @include panel($sidebarblock-bg, $panel-padding, false);
       > .title {
         @extend %blocktitle;
       }
@@ -110,7 +110,6 @@ $panel-padding: calculateRem(20) !default;
       }
       cite {
         display: block;
-        //letter-spacing: -0.05em;
         letter-spacing: -0.025em;
         color: $blockquote-cite-font-color;
       }
@@ -118,7 +117,7 @@ $panel-padding: calculateRem(20) !default;
   }
 
   .quoteblock {
-    margin: 0 1em $paragraph-margin-bottom 1.5em;
+    margin: 0 1em $block-margin-bottom 1.5em;
     display: table; // enables auto width
     &:not(.excerpt) > .title {
       margin-left: -1.5em;
@@ -146,17 +145,6 @@ $panel-padding: calculateRem(20) !default;
       padding: 0;
       border: 0;
 
-      &:before {
-        content: '\201c';
-        float: left;
-        //font-size: 3em;
-        font-size: 2.75em;
-        font-weight: bold;
-        line-height: 0.6em; // use 0.67em if font-weight: normal
-        margin-left: -0.6em;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-
       > .paragraph:last-child p {
         margin-bottom: 0;
       }
@@ -177,7 +165,7 @@ $panel-padding: calculateRem(20) !default;
       }
 
       &.abstract {
-        margin: 0 1em $paragraph-margin-bottom 1em;
+        margin: 0 1em $block-margin-bottom 1em;
         display: block;
         > .title {
           margin: 0 0 0.375em 0;
@@ -186,6 +174,7 @@ $panel-padding: calculateRem(20) !default;
         }
       }
     }
+
     &.excerpt > blockquote,
     .quoteblock {
       padding: 0 0 0.25em 1em;
@@ -211,11 +200,8 @@ $panel-padding: calculateRem(20) !default;
   }
 
   .verseblock {
-    //margin: 0 0.5em $paragraph-margin-bottom 0.5em;
-    margin: 0 1em $paragraph-margin-bottom 1em;
+    margin: 0 1em $block-margin-bottom 1em;
     pre {
-      // FIXME make me a variable
-      font-family: 'Open Sans', 'DejaVu Sans', sans;
       font-size: 1.15rem;
       color: $blockquote-font-color;
       font-weight: 300;
@@ -223,11 +209,6 @@ $panel-padding: calculateRem(20) !default;
       strong {
         font-weight: 400;
       }
-    }
-
-    .attribution {
-      margin-top: 1.25rem;
-      margin-left: 0.5ex;
     }
   }
 

@@ -219,6 +219,29 @@ This is a verse block.
   Indents and endlines are preserved in verse blocks.
 ____
 
+== Abstracts
+
+[abstract]
+=== Chapter Abstract
+
+This is an abstract written as a chapter.
+
+=== Other Abstracts
+
+[abstract]
+.Optional Abstract Title
+This is an abstract written as a paragraph.
+
+The next paragraph is not part of the abstract any more.
+
+[abstract]
+.Optional Abstract Title
+--
+This is an abstract written in an open block.
+
+More lines may follow
+--
+
 == Admonitions
 There are five admonition labels: Tip, Note, Important, Caution and Warning.
 
