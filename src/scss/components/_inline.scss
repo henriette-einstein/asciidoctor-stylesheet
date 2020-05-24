@@ -1,9 +1,7 @@
-@import 'common';
-
 %inline {
   color: $default-font-color;
-  font-family: $default-font-family;
-  line-height: $default-line-height;
+  // font-family: $default-font-family;
+  // line-height: $default-line-height;
   margin: 0;
   a {
     color: $link-font-color;

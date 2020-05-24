@@ -1,0 +1,45 @@
+= Customization
+
+== Fonts
+
+|===
+| Name | Font | Weight 
+
+| heading-font | OpenSans | 700 
+| body-font | Lora | 400 
+| Mono | Roboto Mono | 400 
+
+|===
+
+== Colors
+The colors used in the stylesheet are based on the https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Color of the year 2020].
+
+|===
+| Name | RGB | Description
+
+| color-heading |#C9D8E7 | Color for Headings 
+| color-title | #889095 | Color for Titles
+| color-text | #3A4950 | Color for regular text
+| bg-panel | #E4E6E9 | Default panel background
+| bg-panel-example | #C1C3C7 | Background for example panels
+|===
+
+== Document Areas
+
+* Headings
+* Body Text
+* Links
+* Blocktitles
+
+|===
+| Area | Font | Variant | Size | Weight | Color
+
+| Heading 1 | heading-font | regular | 2em | bold | color-heading
+| Heading 2 | heading-font | regular | 1.75em | bold | color-heading
+| Heading 3 | heading-font | regular | 1.75em | bold | color-heading
+| Heading 4 | heading-font | regular | 1.75em | bold | color-heading
+| Heading 5 | heading-font | regular | 1.75em | bold | color-heading
+| Heading 6 | heading-font | regular | 1.75em | bold | color-heading
+| Body Text | body-font | regular | 1rem | 400 | color-text
+
+|===

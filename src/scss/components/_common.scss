@@ -59,6 +59,7 @@
 
 %part {
   @extend %default-area;
+  font-family: $default-font-family;
 
   *zoom: 1;
   position: relative;

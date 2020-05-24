@@ -5,7 +5,7 @@ Firstname Lastname <author@asciidoctor.org>
 :toclevels: 5
 :toc-title: Table of Contents
 :icons: font
-:stem: latexmath
+// :stem: latexmath
 :quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 
 Content entered directly below the header but before the first section heading is called the preamble.
@@ -41,14 +41,15 @@ This is an attribute reference {quick-uri}[which links this text to the Asciidoc
 * apostrophe: Sam's
 * XML entity (e.g., dagger): &#8224;
 
-=== Math
+// Commented out because asciidoctor-pdf has a bug relating stem
+// === Math
 
-Find the area under the graph of \$y = x^2\$ between \$x= 1\$ and \$x = 2\$.
+// Find the area under the graph of \$y = x^2\$ between \$x= 1\$ and \$x = 2\$.
 
-[stem]
-++++
-\[ \int_1^2 x^2 dx = \left[ \frac{x^3}{3} \right]_1^2 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{7}{3} \]
-++++
+// [stem]
+// ++++
+// \[ \int_1^2 x^2 dx = \left[ \frac{x^3}{3} \right]_1^2 = \frac{2^3}{3} - \frac{1^3}{3} = \frac{7}{3} \]
+// ++++
 
 == Images
 
