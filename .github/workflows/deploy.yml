@@ -1,0 +1,24 @@
+on: push
+name: Publish Website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+          run: |
+            npm ci
+            npm run build
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ${{ secrets.SFTP_HOST }}
+          ftp-username: ${{ secrets.SFTP_USER }}
+          ftp-password: ${{ secrets.SFTP_PASSWORD }}
+          local-dir: dist
+          git-ftp-args: --dry-run
