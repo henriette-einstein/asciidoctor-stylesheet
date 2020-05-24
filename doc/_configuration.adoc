@@ -5,9 +5,9 @@
 |===
 | Name | Font | Weight 
 
-| heading-font | OpenSans | 700 
-| body-font | Lora | 400 
-| Mono | Roboto Mono | 400 
+| heading-font-family | OpenSans | 700 
+| body-font-family | Lora | 400 
+| mono-font-family | Roboto Mono | 400 
 
 |===
 
@@ -24,7 +24,7 @@ The colors used in the stylesheet are based on the https://store.pantone.com/de/
 | bg-panel-example | #C1C3C7 | Background for example panels
 |===
 
-== Document Areas
+== Sizes, Weights and Colors
 
 * Headings
 * Body Text
@@ -34,12 +34,12 @@ The colors used in the stylesheet are based on the https://store.pantone.com/de/
 |===
 | Area | Font | Variant | Size | Weight | Color
 
-| Heading 1 | heading-font | regular | 2em | bold | color-heading
-| Heading 2 | heading-font | regular | 1.75em | bold | color-heading
-| Heading 3 | heading-font | regular | 1.75em | bold | color-heading
-| Heading 4 | heading-font | regular | 1.75em | bold | color-heading
-| Heading 5 | heading-font | regular | 1.75em | bold | color-heading
-| Heading 6 | heading-font | regular | 1.75em | bold | color-heading
-| Body Text | body-font | regular | 1rem | 400 | color-text
+| Heading 1 | heading-font-family | regular | 2em | bold | color-heading
+| Heading 2 | heading-font-family | regular | 1.75em | bold | color-heading
+| Heading 3 | heading-font-family | regular | 1.75em | bold | color-heading
+| Heading 4 | heading-font-family | regular | 1.75em | bold | color-heading
+| Heading 5 | heading-font-family | regular | 1.75em | bold | color-heading
+| Heading 6 | heading-font-family | regular | 1.75em | bold | color-heading
+| Body Text | body-font-family | regular | 1rem | 400 | color-text
 
 |===
