@@ -22,6 +22,15 @@ Some constrained `monospace text`, and some ``u``nconstrained ``m``onospace ``t`
 
 Some Superscript^®^ text and some subscript text: H~2~O.
 
+== Line breaks
+
+This line has a line break at the end of the line +
+foloowed by a new line
+
+[%hardbreaks]
+These two lines are using the %hardbreak option
+to prvent concatination of lines
+
 === Links
 
 The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>
@@ -29,6 +38,25 @@ The text at the end of this sentence is cross referenced to <<_third_level_headi
 This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual^].
 
 This is an attribute reference {quick-uri}[which links this text to the Asciidoctor Quick Reference Guide^].
+
+=== Horizontal rule
+
+This is a paragraph folllowed by a horizontal rule
+
+'''
+
+followed by a new paragraph
+
+These are four horizontal rules written with Markdown syntax
+
+.Markdown-style horizontal rules
+====
+---
+- - -
+***
+* * *
+====
+
 
 === Replacements
 
@@ -157,25 +185,57 @@ Cloud Providers::
 
 == Blocks
 
-.Paragraph Title
+.Paragraph Block
 This is a paragraph.
 
-.Example block title
+.Example block
 ====
 Content in an example block is subject to normal substitutions.
+
+This is the second line
 ====
 
-.Sidebar title
+.Sidebar block
 ****
 Sidebars contain aside text and are subject to normal substitutions.
+
+This is the second line
 ****
 
 [#id-for-listing-block]
-.Listing block title
+.Listing block 
 ----
 Content in a listing block is subject to verbatim substitutions.
 Listing block content is commonly used to preserve code input.
+
+This is the second line
 ----
+
+.Literal block
+....
+Litaral blocks display output exactly as entered
+   This is an indeted line
+This is the third line
+....
+
+.Open block
+--
+Anonymous block that can act as any block.
+
+This is the second line
+--
+
+.Fenced block
+```
+Source code or keyboard input is displayed as entered.
+   This is an indeted line
+This is the third line
+```
+
+.Passthrough block
+++++
+<p>This is a paragraph with <i>italic</i> and <b>bold</b> characters</p>
+++++
 
 == Tables
 
@@ -204,6 +264,12 @@ Listing block content is commonly used to preserve code input.
 |===
 ====
 
+== Collapsible Content
+ 
+[%collapsible]
+====
+Example block turns into collapsible summary/details.
+====
 
 == Quotes
 
