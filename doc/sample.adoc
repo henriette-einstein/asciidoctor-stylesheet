@@ -25,11 +25,11 @@ Some Superscript^®^ text and some subscript text: H~2~O.
 === Line breaks
 
 This line has a line break at the end of the line +
-foloowed by a new line
+followed by a new line
 
 [%hardbreaks]
 These two lines are using the %hardbreak option
-to prvent concatination of lines
+to prevent concatination of lines
 
 === Links
 
