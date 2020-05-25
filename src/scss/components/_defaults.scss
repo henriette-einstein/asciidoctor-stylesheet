@@ -65,8 +65,8 @@ $block-margin-bottom: 1.25em;
 // Block title
 $blocktitle-font-family: $title-font-family !default;
 $blocktitle-font-color: $color-title !default;
-$blocktitle-font-weight: $title-font-weight !default;
-$blocktitle-font-style: italic !default;
+$blocktitle-font-weight: bold !default;
+$blocktitle-font-style: regular !default;
 $blocktitle-font-size: 2.3125em;
 
 $content-font-family: $default-font-family !default;

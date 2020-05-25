@@ -30,6 +30,8 @@
   font-weight: $blocktitle-font-weight;
   text-align: left;
   font-size: 1rem;
+
+  outline-style: none;
 }
 
 %block {
@@ -79,6 +81,10 @@
   line-height: $content-line-height;
   margin-top: 1.25em;
 
+  hr {
+    border-top: $sect-divider-size $sect-divider-style $sect-divider-color;
+    border-bottom: 0;
+  }
   .imageblock img,
   .image > img {
     height: auto;
@@ -118,18 +124,6 @@
       border-top: $hr-border-width $hr-border-style $hr-border-color;
     }
   }
-  /**
-  > h1:first-child + #toc {
-    margin-top: 8px;
-    border-top: 1px solid #ddddd8;
-  }
-
-  > h1:only-child {
-    border-bottom: 1px solid #ddddd8;
-    padding-bottom: 8px;
-  }
-  */
-
   .details {
     border-bottom: 1px solid #ddddd8;
     line-height: 1.45;
@@ -174,12 +168,15 @@
 
 %footnotes {
   @extend %part;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  margin-bottom: 0.625em;
 }
 
 %footer {
   @extend %part;
-}
-
-%line-height {
-  line-height: $default-line-height;
+  max-width: 100%;
+  background-color: black;
+  color: white;
+  padding: 1.25em;
 }

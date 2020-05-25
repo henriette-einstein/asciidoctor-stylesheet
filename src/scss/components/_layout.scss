@@ -23,6 +23,9 @@
   #footnotes {
     @extend %footnotes;
   }
+  #footer {
+    @extend %footer;
+  }
 }
 
 %panellayout {
