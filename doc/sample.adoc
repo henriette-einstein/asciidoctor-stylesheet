@@ -223,6 +223,7 @@ Anonymous block that can act as any block.
 This is the second line
 --
 
+.Sourcecode block
 ```
 Source code or keyboard input is displayed as entered.
    This is an indented line
@@ -230,6 +231,8 @@ This is the third line
 ```
 
 .Passthrough block
+The next paragrap is ented with a passthrough block.
+
 ++++
 <p>This is a paragraph in a pathhrough block with <i>italic</i> and <b>bold</b> characters</p>
 ++++

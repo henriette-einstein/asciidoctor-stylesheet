@@ -2,11 +2,11 @@
   color: $color-default;
   margin: 0;
   a {
-    color: $link-font-color;
+    color: $color-link;
     text-decoration: none;
   }
   a:hover {
-    color: $link-font-color-hover;
+    color: $color-link-hover;
     text-decoration: underline;
   }
   code,

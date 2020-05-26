@@ -2,6 +2,7 @@
 
 // Fonts
 $default-font-family: 'Lora', serif;
+//$default-font-family: 'Open Sans', sans-serif;
 $heading-font-family: 'Open Sans', sans-serif;
 $mono-font-family: 'Roboto Mono', monospace;
 $ansi-safety-word-font: 'Open Sans', sans-serif;
@@ -27,6 +28,8 @@ $pantone-cornhusk: #f3d5ad;
 
 // Color-settings
 $color-heading: var(--color-heading, $pantone-classic-blue); // was  #ba3925
+$color-link: var(--color-link, $pantone-classic-blue); // was  #ba3925
+$color-link-hover: var(--color-link-hover, darken($pantone-classic-blue, 5%));
 $color-title: var(--color-title, $pantone-classic-blue);
 $color-blocktitle: darken($pantone-monument, 20%) !default; // was #7a2518
 $color-default: lighten(black, 5%) !default; // was black
@@ -59,8 +62,8 @@ $panel-bg: lighten($pantone-baby-blue, 20%); // #f3f3f2;
 // $panel-border-color: lighten(black, 85%);
 // $panel-font-color: rgba(0, 0, 0, 0.75);
 
-$sidebarblock-bg: darken($panel-bg, 2%);
-$exampleblock-bg: lighten($pantone-cornhusk, 15%); // #fffef7;
+$sidebarblock-bg: lighten($pantone-cornhusk, 15%);
+$exampleblock-bg: darken($panel-bg, 2%); // #fffef7;
 $codeblock-bg: $panel-bg;
 
 $default-line-height: 1.6 !default;
@@ -107,8 +110,8 @@ $hr-border-style: solid;
 $hr-border-color: lighten($color-default, 20%) !default;
 
 // link
-$link-font-color: #2156a5 !default;
-$link-font-color-hover: #1d4b8f !default;
+//$link-font-color: #2156a5 !default;
+//$link-font-color-hover: #1d4b8f !default;
 
 // content
 $content-line-height: $default-line-height;
