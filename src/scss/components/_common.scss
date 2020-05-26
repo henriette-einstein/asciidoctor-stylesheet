@@ -23,7 +23,7 @@
 %blocktitle {
   @extend %subheading;
   font-family: $blocktitle-font-family;
-  color: $blocktitle-font-color;
+  color: $color-blocktitle;
   font-style: $blocktitle-font-style;
   font-size: $blocktitle-font-size;
 
@@ -109,13 +109,7 @@
     // margin: 0.67em 0;
   }
   > h1:first-child {
-    color: $color-title;
-    @if $title-font-weight and $title-font-weight != $header-font-weight {
-      font-weight: $title-font-weight;
-    }
-    @if $title-font-size {
-      font-size: $title-font-size;
-    }
+    @include title-font;
     margin-top: 2.25rem;
     margin-bottom: 0;
 

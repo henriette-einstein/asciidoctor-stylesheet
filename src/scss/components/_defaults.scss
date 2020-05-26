@@ -9,11 +9,6 @@ $ansi-safety-word-font: 'Open Sans', sans-serif;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
 
-// Colors
-$color-heading: #0f4c81 !default; // was  #ba3925
-$color-title: #658dc6 !default; // was #7a2518
-$color-default: lighten(black, 5%) !default; // was black
-
 // Ansi colors
 $ansi-red: #c8102e;
 $ansi-orange: #ff8200;
@@ -22,21 +17,50 @@ $ansi-green: #007b5f;
 $ansi-blue: #0072ce;
 $ansi-purple: #6d2077;
 
+// Pantone Colors
+$pantone-classic-blue: #0f4c81;
+$pantone-monument: #84898c;
+$pantone-provence: #658dc6;
+$pantone-baby-blue: #b5c7d3;
+$pantone-peach-quartz: #f5b895;
+$pantone-cornhusk: #f3d5ad;
+
+// Color-settings
+$color-heading: var(--color-heading, $pantone-classic-blue); // was  #ba3925
+$color-title: var(--color-title, $pantone-classic-blue);
+$color-blocktitle: darken($pantone-monument, 20%) !default; // was #7a2518
+$color-default: lighten(black, 5%) !default; // was black
+
+// Sizes
+$size-h1: 2.75rem;
+$size-h2: 2.315rem;
+$size-h3: 1.6875rem;
+$size-h4: 1.4375rem;
+$size-h5: 1.125rem;
+$size-h6: 1rem;
+
 %body-font {
   font-family: $default-font-family;
   font-weight: $font-weight-normal;
   color: $color-default;
 }
 
+@mixin title-font {
+  font-family: $heading-font-family;
+  font-weight: $font-weight-normal;
+  font-size: $size-h1;
+  color: $color-title;
+}
+
 $small-font-size: 60% !default;
 
 // Panels
-$panel-bg: #f3f3f2;
-$panel-border-color: lighten(black, 85%);
-$panel-font-color: rgba(0, 0, 0, 0.75);
+$panel-bg: lighten($pantone-baby-blue, 20%); // #f3f3f2;
+// $panel-border-color: lighten(black, 85%);
+// $panel-font-color: rgba(0, 0, 0, 0.75);
 
 $sidebarblock-bg: darken($panel-bg, 2%);
-$exampleblock-bg: #fffef7;
+$exampleblock-bg: lighten($pantone-cornhusk, 15%); // #fffef7;
 $codeblock-bg: $panel-bg;
 
 $default-line-height: 1.6 !default;
@@ -64,7 +88,6 @@ $block-margin-bottom: 1.25em;
 
 // Block title
 $blocktitle-font-family: $title-font-family !default;
-$blocktitle-font-color: $color-title !default;
 $blocktitle-font-weight: bold !default;
 $blocktitle-font-style: regular !default;
 $blocktitle-font-size: 2.3125em;

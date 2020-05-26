@@ -68,15 +68,14 @@ This is a paragraph folllowed by a horizontal rule
 
 followed by a new paragraph
 
+.Markdown-style horizontal rules
 These are four horizontal rules written with Markdown syntax
 
-.Markdown-style horizontal rules
-====
 ---
 - - -
 ***
 * * *
-====
+
 
 == Images
 

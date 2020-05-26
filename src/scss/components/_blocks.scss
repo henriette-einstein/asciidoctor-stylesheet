@@ -5,31 +5,14 @@ $panel-border-size: 1px !default;
 $panel-margin-bottom: calculateRem(20) !default;
 $panel-padding: calculateRem(20) !default;
 
-@mixin panel($bg: $panel-bg, $padding: $panel-padding, $border: true) {
+@mixin panel($bg: $panel-bg, $padding: $panel-padding) {
   @if $bg {
     $bg-lightness: lightness($bg);
-
-    @if $border {
-      border-style: $panel-border-style;
-      border-width: $panel-border-size;
-      border-color: $panel-border-color;
-      box-shadow: 5px 5px 5px lighten($panel-border-color, 5%);
-    } @else {
-      border-style: none;
-      border-width: 0;
-    }
 
     margin-bottom: $panel-margin-bottom;
     padding: $padding;
 
     background: $bg;
-    @if $bg-lightness >= 50% {
-      color: $panel-font-color;
-    } @else {
-      color: $panel-font-color-alt;
-    }
-
-    // Respect the padding, fool.
     > :first-child {
       margin-top: 0;
     }
@@ -75,11 +58,11 @@ $panel-padding: calculateRem(20) !default;
   }
 
   .exampleblock > .content {
-    @include panel($exampleblock-bg, $panel-padding, false);
+    @include panel($exampleblock-bg, $panel-padding);
   }
 
   .listingblock > .content {
-    @include panel($codeblock-bg, $panel-padding, false);
+    @include panel($codeblock-bg, $panel-padding);
   }
 
   .exampleblock > .content,
@@ -92,7 +75,7 @@ $panel-padding: calculateRem(20) !default;
 
   .sidebarblock {
     > .content {
-      @include panel($sidebarblock-bg, $panel-padding, false);
+      @include panel($sidebarblock-bg, $panel-padding);
       > .title {
         @extend %blocktitle;
       }
