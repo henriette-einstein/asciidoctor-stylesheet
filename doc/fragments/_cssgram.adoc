@@ -10,15 +10,6 @@ WARNING: This filters are not supported by most PDF renderers and therefore appl
 image::resources/frenchbull.jpg[insta-aden]
 ----
 
-++++
-<div class="imageblock insta-toaster2">
-<div class="content" class="1977">
-<img class="insta-toaster" src="resources/frenchbull.jpg" alt="insta-toaster">
-</div>
-<div class="title">Figure 24. Image with role "insta-toaster"</div>
-</div>
-++++
-
 .Supported roles
 [%collapsible]
 ====
