@@ -1,15 +1,17 @@
 @import 'inline';
+@import 'blocks';
 @import 'paragraph';
 @import 'lists';
+@import 'images';
 @import 'table';
 @import 'section';
-@import 'blocks';
 @import 'toc';
 
 %elements {
   @extend %inline;
+  @extend %blocks;
   @extend %paragraph;
   @extend %lists;
   @extend %table;
-  @extend %blocks;
+  @extend %images;
 }

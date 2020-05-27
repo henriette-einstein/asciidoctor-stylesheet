@@ -79,8 +79,11 @@ These are four horizontal rules written with Markdown syntax
 
 == Images
 
+=== Standard image handling
 .Image caption
 image::resources/picture.jpg[This is the image alt text.]
+
+include::fragments/_cssgram.adoc[leveloffset=1]
 
 == Footnotes
 

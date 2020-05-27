@@ -85,11 +85,6 @@
     border-top: $sect-divider-size $sect-divider-style $sect-divider-color;
     border-bottom: 0;
   }
-  .imageblock img,
-  .image > img {
-    height: auto;
-    max-width: 100%;
-  }
   &:before {
     content: none;
   }
