@@ -1,0 +1,141 @@
+%images {
+  .imageblock img,
+  .image > img {
+    height: auto;
+    max-width: 100%;
+  }
+  //  @media only screen {
+  .imageblock {
+    &.insta-1977 {
+      .content {
+        @include _1977;
+      }
+    }
+    &.insta-aden {
+      .content {
+        @include aden;
+      }
+    }
+    &.insta-brannan {
+      .content {
+        @include brannan;
+      }
+    }
+    &.insta-brooklyn {
+      .content {
+        @include brooklyn;
+      }
+    }
+    &.insta-clarendon {
+      .content {
+        @include clarendon;
+      }
+    }
+    &.insta-earlybird {
+      .content {
+        @include earlybird;
+      }
+    }
+    &.insta-gingham {
+      .content {
+        @include gingham;
+      }
+    }
+    &.insta-hudson {
+      .content {
+        @include hudson;
+      }
+    }
+    &.insta-inkwell {
+      .content {
+        @include inkwell;
+      }
+    }
+    &.insta-kelvin {
+      .content {
+        @include kelvin;
+      }
+    }
+    &.insta-lark {
+      .content {
+        @include lark;
+      }
+    }
+    &.insta-lofi {
+      .content {
+        @include lofi;
+      }
+    }
+    &.insta-maven {
+      .content {
+        @include maven;
+      }
+    }
+    &.insta-mayfair {
+      .content {
+        @include mayfair;
+      }
+    }
+    &.insta-moon {
+      .content {
+        @include moon;
+      }
+    }
+    &.insta-nashville {
+      .content {
+        @include nashville;
+      }
+    }
+    &.insta-perpetua {
+      .content {
+        @include perpetua;
+      }
+    }
+    &.insta-reyes {
+      .content {
+        @include reyes;
+      }
+    }
+    &.insta-rise {
+      .content {
+        @include rise;
+      }
+    }
+    &.insta-slumber {
+      .content {
+        @include slumber;
+      }
+    }
+    &.insta-stinson {
+      .content {
+        @include stinson;
+      }
+    }
+    &.insta-toaster {
+      .content {
+        @include toaster;
+      }
+    }
+    &.insta-valencia {
+      .content {
+        @include valencia;
+      }
+    }
+    &.insta-walden {
+      .content {
+        @include walden;
+      }
+    }
+    &.insta-willow {
+      .content {
+        @include willow;
+      }
+    }
+    &.insta-xpro2 {
+      .content {
+        @include xpro2;
+      }
+    }
+  }
+}
+//}
