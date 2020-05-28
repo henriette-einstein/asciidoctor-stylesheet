@@ -12,6 +12,8 @@
   @extend %blocks;
   @extend %paragraph;
   @extend %lists;
-  @extend %table;
   @extend %images;
+  @extend %table;
+  @extend %section;
+  @extend %toc;
 }

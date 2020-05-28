@@ -4,12 +4,20 @@
     height: auto;
     max-width: 100%;
   }
+  .imageblock {
+    break-inside: avoid;
+  }
   .imageblock .content {
     background-color: white;
   }
 
   @media only screen {
     .imageblock {
+      .content {
+        width: max-content;
+        height: max-content;
+        max-width: 100%;
+      }
       &.insta-1977 {
         .content {
           @include _1977;
