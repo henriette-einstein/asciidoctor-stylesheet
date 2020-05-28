@@ -1,8 +1,5 @@
 %paragraph {
   p {
-    font-family: inherit;
-    font-size: $paragraph-font-size;
-    line-height: $default-line-height;
     margin-bottom: $paragraph-margin-bottom;
     @media print {
       margin-bottom: 0.5em;
