@@ -1,5 +1,5 @@
 /** Fonts */
-@import 'typefaces/asciidoctor';
+@import 'typefaces/asciidoctor-modern';
 
 /** Components */
 @import 'components/all';
@@ -9,14 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   tab-size: 4;
-  @extend %baselayout;
+  @extend %layout;
   @extend %elements;
-}
-
-body.toc-left {
-  @extend %panellayout;
-}
-
-body.toc-right {
-  @extend %panellayout-toc-right;
 }

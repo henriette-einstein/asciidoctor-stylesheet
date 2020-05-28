@@ -94,7 +94,7 @@ $panel-padding: calculateRem(20) !default;
       cite {
         display: block;
         letter-spacing: -0.025em;
-        color: $blockquote-cite-font-color;
+        color: $color-cite;
       }
     }
   }
@@ -114,7 +114,7 @@ $panel-padding: calculateRem(20) !default;
 
     blockquote,
     p {
-      color: $blockquote-font-color;
+      color: $color-blockquote;
       font-size: 1.15rem;
       line-height: 1.75;
       word-spacing: 0.1em;
@@ -186,7 +186,7 @@ $panel-padding: calculateRem(20) !default;
     margin: 0 1em $block-margin-bottom 1em;
     pre {
       font-size: 1.15rem;
-      color: $blockquote-font-color;
+      color: $color-blockquote;
       font-weight: 300;
       text-rendering: optimizeLegibility;
       strong {

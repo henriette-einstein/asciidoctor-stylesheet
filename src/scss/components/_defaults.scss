@@ -1,14 +1,17 @@
 @import '../util/calc.scss';
 
 // Fonts
-$default-font-family: 'Lora', serif;
-//$default-font-family: 'Open Sans', sans-serif;
-$heading-font-family: 'Open Sans', sans-serif;
-$mono-font-family: 'Roboto Mono', monospace;
 $ansi-safety-word-font: 'Open Sans', sans-serif;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+// Standard colors
+$color-light-black: lighten(black, 10%) !default;
+$color-smoke: #f5f5f5 !default;
+$color-light-gray: #e3e3e3 !default;
+$color-medium-gray: #dddddd !default;
+$color-dark-gray: #9a9a9a !default;
 
 // Ansi colors
 $ansi-red: #c8102e;
@@ -21,6 +24,7 @@ $ansi-purple: #6d2077;
 // Pantone Colors
 $pantone-classic-blue: #0f4c81;
 $pantone-monument: #84898c;
+$pantone-monument-dark: darken($pantone-monument, 20%);
 $pantone-provence: #658dc6;
 $pantone-baby-blue: #b5c7d3;
 $pantone-peach-quartz: #f5b895;
@@ -31,8 +35,11 @@ $color-heading: var(--color-heading, $pantone-classic-blue); // was  #ba3925
 $color-link: var(--color-link, $pantone-classic-blue); // was  #ba3925
 $color-link-hover: var(--color-link-hover, darken($pantone-classic-blue, 5%));
 $color-title: var(--color-title, $pantone-classic-blue);
-$color-blocktitle: darken($pantone-monument, 20%) !default; // was #7a2518
-$color-default: lighten(black, 5%) !default; // was black
+$color-blocktitle: $pantone-monument-dark; // was #7a2518
+$color-default: $color-light-black;
+$color-details: var(--color-details, $color-medium-gray);
+$color-blockquote: var(--color-blockquote, $color-light-black);
+$color-cite: var(--color-cite, lighten($color-light-black, 50%));
 
 // Sizes
 $size-h1: 2.75rem;
@@ -95,19 +102,18 @@ $blocktitle-font-weight: bold !default;
 $blocktitle-font-style: regular !default;
 $blocktitle-font-size: 2.3125em;
 
-$content-font-family: $default-font-family !default;
-$content-font-color: lighten($color-default, 20%) !default;
+//$content-font-family: $default-font-family !default;
+//$content-font-color: lighten($color-default, 20%) !default;
 
 // Blockquotes
 
-$blockquote-font-color: $color-default;
-$blockquote-cite-font-color: lighten($blockquote-font-color, 50%);
 $blockquote-cite-font-size: calculateRem(15px);
 
 // hr
 $hr-border-width: 1px;
 $hr-border-style: solid;
-$hr-border-color: lighten($color-default, 20%) !default;
+$hr-border-color: var(--hr-border-color, lighten($color-default, 80%));
+$hr-border-top: $hr-border-width $hr-border-style $hr-border-color; // just calculated, not overridable
 
 // link
 //$link-font-color: #2156a5 !default;
@@ -131,11 +137,6 @@ $table-row-font-size: inherit;
 $table-line-height: 1.6;
 $table-head-bg: #f7f8f7;
 $table-even-row-bg: #f8f8f7;
-
-$sect-divider-size: 1px;
-$sect-divider-style: solid;
-$sect-divider-color: #e7e7e9;
-$hr-border-color: #dddddf;
 
 // TOC
 $toc-background-color: #f8f8f7 !default;

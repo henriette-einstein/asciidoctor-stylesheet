@@ -41,22 +41,24 @@
   font-size: $size-h6;
 }
 
-.sect1 h2,
-.sect2 h3,
-.sect3 h4,
-.sect4 h5,
-.sect5 h6 {
-  @extend %section-title;
-}
-
-.sect1 {
-  + .sect1 {
-    border-top: $sect-divider-size $sect-divider-style $sect-divider-color;
+%section {
+  .sect1 h2,
+  .sect2 h3,
+  .sect3 h4,
+  .sect4 h5,
+  .sect5 h6 {
+    @extend %section-title;
   }
-}
 
-@include media-break(m) {
   .sect1 {
-    padding-bottom: 1.25em;
+    + .sect1 {
+      border-top: $hr-border-top;
+    }
+  }
+
+  @include media-break(m) {
+    .sect1 {
+      padding-bottom: 1.25em;
+    }
   }
 }
