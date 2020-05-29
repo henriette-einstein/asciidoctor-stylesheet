@@ -3,31 +3,24 @@
   .ulist,
   .dlist,
   .hdlist {
-    .title {
-      @extend %blocktitle;
-    }
+    @extend %block;
   }
 
   ul,
   ol {
     margin-left: 1.5em;
+
+    li ul,
+    li ol {
+      margin-left: 1.25em;
+      margin-bottom: 0;
+    }
   }
   ul,
   ol,
   dl {
-    font-size: 1em;
-    line-height: 1.6;
     margin-bottom: 1.25em;
     list-style-position: outside;
-    font-family: inherit;
-  }
-  ul li ul,
-  ul li ol,
-  ol li ul,
-  ol li ol {
-    margin-left: 1.25em;
-    margin-bottom: 0;
-    font-size: 1em;
   }
 
   .olist > ol > li:last-child > :last-child,
@@ -130,39 +123,45 @@
     font-style: normal;
   }
 
+  ol {
+    list-style-type: decimal;
+  }
+  /**
   @mixin ordered-list-type($class, $type) {
-    ol.#{$class} {
-      list-style-type: #{$type};
+    ol.# {$class} {
+      list-style-type: # {$type};
     }
   }
 
-  @include ordered-list-type(arabic, decimal);
-  @include ordered-list-type(decimal, decimal-leading-zero);
-  @include ordered-list-type(loweralpha, lower-alpha);
-  @include ordered-list-type(upperalpha, upper-alpha);
-  @include ordered-list-type(lowerroman, lower-roman);
-  @include ordered-list-type(upperroman, upper-roman);
-  @include ordered-list-type(lowergreek, lower-greek);
+  */
+
+  // @include ordered-list-type(arabic, decimal);
+  // @include ordered-list-type(decimal, decimal-leading-zero);
+  // @include ordered-list-type(loweralpha, decimal);
+  // @include ordered-list-type(upperalpha, decimal);
+  // @include ordered-list-type(lowerroman, decimal);
+  // @include ordered-list-type(upperroman, upper-roman);
+  // @include ordered-list-type(lowergreek, lower-greek);
   //@include ordered-list-type(armenian, armenian);
   //@include ordered-list-type(georgian, georgian);
-}
 
-.hdlist > table,
-.colist > table {
-  border: 0;
-  background: none; // FIXME this wouldn't be required if a background was set on table.tableblock and not table
-  > tbody > tr {
-    background: none;
+  .hdlist > table,
+  .colist > table {
+    border: 0;
+    background: none; // FIXME this wouldn't be required if a background was set on table.tableblock and not table
+    > tbody > tr {
+      background: none;
+    }
+
+    td.hdlist1,
+    td.hdlist2 {
+      vertical-align: top;
+      padding: 0 calculateRem(10px);
+    }
+
+    td.hdlist1 {
+      font-weight: bold;
+      padding-bottom: $paragraph-margin-bottom;
+    }
   }
-}
-
-td.hdlist1,
-td.hdlist2 {
-  vertical-align: top;
-  padding: 0 calculateRem(10px);
-}
-
-td.hdlist1 {
-  font-weight: bold;
-  padding-bottom: $paragraph-margin-bottom;
 }

@@ -1,7 +1,9 @@
-== Use Instagram-like filters
+== CSSgram
 Thanks to the https://una.im/CSSgram[CSSgram] library you can use Instagram-like filters in your Asciidoctor document by simply adding a role to an imageblock.
 
 WARNING: This filters are not supported by most PDF renderers and therefore apply only when rendered on a screen.
+
+== Usage
 
 .Sample syntax
 ----
@@ -11,7 +13,7 @@ image::resources/frenchbull-small.jpg[insta-aden]
 ----
 
 .Supported roles
-[%collapsible]
+[%collapsible%open]
 ====
 * insta-1977
 * insta-aden
@@ -40,7 +42,7 @@ image::resources/frenchbull-small.jpg[insta-aden]
 ====
 
 .Results
-[%collapsible]
+[%collapsible%open]
 ====
 Here are results
 
