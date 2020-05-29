@@ -90,6 +90,34 @@
   }
 }
 
+%toc2 {
+  #{$toctitle-selector} {
+    @extend %h3;
+    color: $color-heading;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.2em;
+  }
+
+  > ul {
+    margin-left: calculateRem(2px);
+  }
+  ul {
+    font-family: $heading-font-family;
+    list-style-type: none;
+  }
+  li {
+    line-height: 1.3334;
+    margin-top: 0.3334em;
+  }
+  a {
+    text-decoration: none;
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
 %footnotes {
   @extend %part;
   padding-top: 0.75em;
@@ -123,7 +151,7 @@
   color: $color-default;
 
   #{$toc-selector} {
-    @extend %toc;
+    @extend %toc2;
   }
   #header {
     @extend %header;

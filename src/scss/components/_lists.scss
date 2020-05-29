@@ -123,27 +123,12 @@
     font-style: normal;
   }
 
+  ul {
+    list-style-type: square;
+  }
   ol {
     list-style-type: decimal;
   }
-  /**
-  @mixin ordered-list-type($class, $type) {
-    ol.# {$class} {
-      list-style-type: # {$type};
-    }
-  }
-
-  */
-
-  // @include ordered-list-type(arabic, decimal);
-  // @include ordered-list-type(decimal, decimal-leading-zero);
-  // @include ordered-list-type(loweralpha, decimal);
-  // @include ordered-list-type(upperalpha, decimal);
-  // @include ordered-list-type(lowerroman, decimal);
-  // @include ordered-list-type(upperroman, upper-roman);
-  // @include ordered-list-type(lowergreek, lower-greek);
-  //@include ordered-list-type(armenian, armenian);
-  //@include ordered-list-type(georgian, georgian);
 
   .hdlist > table,
   .colist > table {
