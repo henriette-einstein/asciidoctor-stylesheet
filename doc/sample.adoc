@@ -83,9 +83,9 @@ These are four horizontal rules written with Markdown syntax
 .Image caption
 image::resources/picture.jpg[This is the image alt text.]
 
-== Use Instagramm-like filters
+=== Use Instagramm-like filters
 
-include::cssgram.adoc[leveloffset=1]
+include::cssgram.adoc[leveloffset=2]
 
 == Footnotes
 
@@ -244,6 +244,19 @@ The next paragrap is ented with a passthrough block.
 
 == Tables
 
+.A table without a title
+The following table does not have a title
+
+|===
+|Column heading 1 |Column heading 2
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|===
+
 .A simple table with a title
 |===
 |Column heading 1 |Column heading 2
@@ -255,6 +268,34 @@ The next paragrap is ented with a passthrough block.
 |Column 2, row 2
 |===
 
+=== Tables with Stripes
+.A simple table with spripes on even rows
+[.stripes-even]
+|===
+|Column heading 1 |Column heading 2
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|===
+
+.A simple table with spripes on odd rows
+[.stripes-odd]
+|===
+|Column heading 1 |Column heading 2
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|===
+
+=== More complex tables
+
+.An example block containing a table
 ====
 .A table containing another nested table
 [cols=".^,<.^a,>.^a"]
