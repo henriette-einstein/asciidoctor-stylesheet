@@ -90,13 +90,9 @@
   }
 }
 
-%toc2 {
+%toc {
   #{$toctitle-selector} {
-    @extend %h3;
-    color: $color-heading;
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-    font-size: 1.2em;
+    @extend %h2;
   }
 
   > ul {
@@ -151,7 +147,7 @@
   color: $color-default;
 
   #{$toc-selector} {
-    @extend %toc2;
+    @extend %toc;
   }
   #header {
     @extend %header;
@@ -180,8 +176,10 @@
     }
     #{$toc-selector} {
       background: $panel-bg;
-      #{toctitle-selector} {
-        font-size: 1.375em;
+      #{$toctitle-selector} {
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        font-size: 1.2em;
       }
       margin-top: 0 !important;
       margin: 0;
