@@ -59,7 +59,7 @@
   .ulist .ulist,
   .ulist .olist,
   .olist .ulist {
-    margin-bottom: $paragraph-margin-bottom / 2;
+    margin-bottom: $block-margin-bottom / 2;
   }
 
   ul.checklist,
@@ -146,7 +146,7 @@
 
     td.hdlist1 {
       font-weight: bold;
-      padding-bottom: $paragraph-margin-bottom;
+      padding-bottom: $block-margin-bottom;
     }
   }
 }

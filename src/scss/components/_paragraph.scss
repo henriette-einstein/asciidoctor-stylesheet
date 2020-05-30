@@ -1,6 +1,19 @@
 %paragraph {
+  .text-center {
+    text-align: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-justify {
+    text-align: justify;
+  }
+
   p {
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: $block-margin-bottom;
     @media print {
       margin-bottom: 0.5em;
     }
@@ -12,7 +25,7 @@
   }
 
   .paragraph {
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: $block-margin-bottom;
     > .title {
       @extend %blocktitle;
     }

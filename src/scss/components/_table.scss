@@ -46,9 +46,9 @@
 
   // NOTE compensate for bottom margin on last block in AsciiDoc table cell
   td.tableblock > .content {
-    margin-bottom: $paragraph-margin-bottom;
+    margin-bottom: $block-margin-bottom;
     > :last-child {
-      margin-bottom: -$paragraph-margin-bottom;
+      margin-bottom: -$block-margin-bottom;
     }
   }
 
