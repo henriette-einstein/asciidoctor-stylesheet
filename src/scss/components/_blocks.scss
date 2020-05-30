@@ -57,6 +57,14 @@ $panel-padding: calculateRem(20) !default;
     @extend %blocktitle;
   }
 
+  .flex {
+    .content {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
   .exampleblock > .content {
     @include panel($exampleblock-bg, $panel-padding);
   }

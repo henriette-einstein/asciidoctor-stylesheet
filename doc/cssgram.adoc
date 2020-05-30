@@ -13,7 +13,7 @@ image::resources/frenchbull-small.jpg[insta-aden]
 ----
 
 .Supported roles
-[%collapsible%open]
+[%collapsible]
 ====
 * insta-1977
 * insta-aden
@@ -42,12 +42,15 @@ image::resources/frenchbull-small.jpg[insta-aden]
 ====
 
 .Results
-[%collapsible%open]
+[%collapsible]
 ====
 Here are results
 
 .Original Image with no role
 image::resources/frenchbull.jpg[French Bull]
+
+[role=flex]
+--
 
 .Image with role "insta-1977"
 [.insta-1977]
@@ -153,5 +156,7 @@ image::resources/frenchbull-small.jpg[insta-willow]
 .Image with role "insta-xpro2"
 [.insta-xpro2]
 image::resources/frenchbull-small.jpg[insta-xpro2]
+
+--
 
 ====
