@@ -286,6 +286,32 @@ The following table does not have a title
 |Column 2, row 2
 |===
 
+.A simple table with a header and a footer
+[options="footer"]
+|===
+|Column heading 1 |Column heading 2
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+
+|Footer in column 1
+|Footer in column 2
+|===
+
+.A simple table without a header
+[cols="2*"]
+|===
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|===
+
 === Tables with Stripes
 .A simple table with spripes on even rows
 [.stripes-even]

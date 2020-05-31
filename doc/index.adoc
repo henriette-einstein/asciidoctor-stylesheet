@@ -12,6 +12,17 @@ link:sample{outfilesuffix}[Example document]
 
 include::_requirements.adoc[leveloffset=1]
 
+== Features
+
+link:features{outfilesuffix}[Features]
+
+
+== Additional features
+
+* Support for CSSgram
+* Support for HTML Flex
+* Support for Cards
+
 == Configuration
 
 include::_configuration.adoc[leveloffset=1]
