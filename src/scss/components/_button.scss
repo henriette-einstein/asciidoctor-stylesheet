@@ -1,0 +1,112 @@
+@import '../mixins/button';
+
+$border-thick: 1px;
+$border-radius-extra-small: 0.125rem !default;
+$border-radius-small: 0.1875rem !default;
+$border-radius-large: 0.25rem !default;
+$border-radius-extreme: 0.875rem !default;
+
+$border-radius-large-top: $border-radius-large $border-radius-large 0 0 !default;
+$border-radius-large-bottom: 0 0 $border-radius-large $border-radius-large !default;
+
+$btn-round-radius: 30px !default;
+
+$height-base: 55px !default;
+
+$btn-icon-size: 3.5rem !default;
+$btn-icon-size-regular: 2.375rem !default;
+$btn-icon-font-size-regular: 0.9375rem !default;
+$btn-icon-font-size-small: 0.6875rem !default;
+$btn-icon-size-small: 1.875rem !default;
+$btn-icon-font-size-lg: 1.325rem !default;
+$btn-icon-size-lg: 3.6rem !default;
+
+$padding-btn-vertical: 11px !default;
+$padding-btn-horizontal: 22px !default;
+
+$default-color: #888888 !default;
+$default-states-color: lighten($default-color, 6%) !default;
+
+%button {
+  .btn-base,
+  .btn,
+  a.btn {
+    border-width: $border-thick;
+    font-weight: $font-weight-normal;
+    font-size: $font-size-small;
+    line-height: $default-line-height;
+    margin: 10px 1px;
+    border: none;
+    border-radius: $border-radius-small;
+    padding: $padding-btn-vertical $padding-btn-horizontal;
+    cursor: pointer;
+
+    @include btn-styles($default-color, $default-states-color);
+
+    &:hover,
+    &:focus {
+      // @include opacity(1);
+      opacity: 1;
+      outline: 0 !important;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      // @include box-shadow(none);
+      outline: 0 !important;
+    }
+
+    &.btn-icon {
+      // see above for color variations
+      height: $btn-icon-size-regular;
+      min-width: $btn-icon-size-regular;
+      width: $btn-icon-size-regular;
+      padding: 0;
+      font-size: $btn-icon-font-size-regular;
+      overflow: hidden;
+      position: relative;
+      line-height: normal;
+
+      &.btn-simple {
+        padding: 0;
+      }
+
+      &.btn-sm {
+        height: $btn-icon-size-small;
+        min-width: $btn-icon-size-small;
+        width: $btn-icon-size-small;
+
+        i.fab,
+        i.now-ui-icons {
+          font-size: $btn-icon-font-size-small;
+        }
+      }
+
+      &.btn-lg {
+        height: $btn-icon-size-lg;
+        min-width: $btn-icon-size-lg;
+        width: $btn-icon-size-lg;
+
+        i.now-ui-icons,
+        i.fab {
+          font-size: $btn-icon-font-size-lg;
+        }
+      }
+
+      &:not(.btn-footer) i.now-ui-icons,
+      &:not(.btn-footer) i.fab {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-12px, -12px);
+        line-height: 1.5626rem;
+        width: 23px;
+      }
+    }
+
+    &:not(.btn-icon) .now-ui-icons {
+      position: relative;
+      top: 1px;
+    }
+  }
+}

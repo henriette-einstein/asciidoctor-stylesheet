@@ -5,6 +5,7 @@
 @import 'images';
 @import 'table';
 @import 'section';
+@import 'button';
 
 %elements {
   @extend %inline;
@@ -14,4 +15,5 @@
   @extend %images;
   @extend %table;
   @extend %section;
+  @extend %button;
 }

@@ -5,8 +5,10 @@ $ansi-safety-word-font: 'Open Sans', sans-serif;
 
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+$font-size-small: 70% !default;
 
 // Standard colors
+$color-white: white !default;
 $color-light-black: lighten(black, 10%) !default;
 $color-smoke: #f5f5f5 !default;
 $color-light-gray: #e3e3e3 !default;
@@ -52,6 +54,8 @@ $color-details: var(--color-details, $color-darkest-gray);
 $color-blockquote: var(--color-blockquote, $color-light-black);
 $color-cite: var(--color-cite, lighten($color-light-black, 50%));
 
+$bg-transparent: transparent !default;
+
 // Sizes
 $size-h1: 2.75rem;
 $size-h2: 2.315rem;
@@ -72,8 +76,6 @@ $size-h6: 1rem;
   font-size: $size-h1;
   color: $color-title;
 }
-
-$small-font-size: 60% !default;
 
 // Panels
 $panel-bg: lighten($pantone-baby-blue, 20%); // #f3f3f2;

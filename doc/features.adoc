@@ -1,48 +1,9 @@
 = Stylesheet Features
+:icons: font
 
 == Colors
 
-=== Standard Text Colors
-This Asciidoctor stylesheet recognizes the following colors
-
-color-default:: the default color used for text rendering
-color-title:: the color used to render the title
-color-heading:: the color used by the section headings
-color-blocktitle:: the color used to format the blocktitle
-
-=== ANSI Z535 Colors
-Besides standard text colors that, the colors used by ANSI Z535 are recognized. These colors cannot be overwritten ins SCSS or
-with CSS variables.
-
-color-ansi-red:: Red as defined by ANSI Z535. 
-color-ansi-orange:: Orange as defined by ANSI Z535.
-color-ansi-yellow:: Yellow as defined by ANSI Z535.
-color-ansi-green:: Green as defined by ANSI Z535.
-color-ansi-blue:: Blue as defined by ANSI Z535.
-color-ansi-purple:: Purple as defined by ANSI Z535.
-
-Ansi Z535 also defines which combination of background and foreground colors have to be used in signal panels. The following
-combinations are defined in the stylesheet
-
-.ANSI Z535 Color Combinations
-|===
-| Name | Foreground | Background
-
-| ansi-danger | white | ansi-red
-| ansi-warning | black | ansi-orange
-| ansi-caution | black | ansi-yellow
-| ansi-notice | white | ansi-blue
-| ansi-safety | white | ansi-green
-
-|===
-
-=== Social Colors
-There are several social media sites that define a specific color for their service. The following colors are supported
-
-color-github:: The color of https://github.com[Github]
-color-twitter:: The color of https://twitter.com[Twitter]
-color-facebook:: The color of https://facebook.com[Facebook]
-color-linkedin:: The color of https://linkedin.com[LinkedIn]
+include::fragments/_colors.adoc[leveloffset=1]
 
 == Sections
 
@@ -83,9 +44,29 @@ Asciidoctor does not recognize button elements. However, link elements can be di
 https://github.com/asciidoctor[Asciidoctor, role=btn]
 ----
 
-The result is a button: https://github.com/asciidoctor[Asciidoctor, role=btn]
+The result is a button: 
+
+https://github.com/asciidoctor[Asciidoctor, role=btn]
+
+Buttons can be used in 2 more sizes by adding the additional roles 
+
+* .btn-sm for small buttons
+* .btn-lg for large buttons
+
+https://github.com/asciidoctor[Asciidoctor, role="btn btn-lg"]
+
 
 === Icons
+Icons from the Fontawesome icon set can be used in any Asciidoctor document if the flag 'icons: font' is set.
+
+* icon:twitter[] Twitter icon
+* icon:facebook[] Facebook icon
+* icon:github[] Github icon
+* icon:linkedin[] LinkedIn icon
+* icon:pinterest[] Pinterest icon
+* icon:google[] Google icon
+* icon:youtube[] Youtube icon
+* icon:instagram[] Instagram icon
 
 
 == Block level elements
