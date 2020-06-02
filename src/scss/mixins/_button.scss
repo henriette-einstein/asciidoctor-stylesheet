@@ -171,3 +171,13 @@
     }
   }
 }
+
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $border) {
+  font-size: $font-size;
+  border-radius: $border;
+  padding: $padding-vertical $padding-horizontal;
+
+  &.btn-simple {
+    padding: $padding-vertical - 1 $padding-horizontal - 1;
+  }
+}

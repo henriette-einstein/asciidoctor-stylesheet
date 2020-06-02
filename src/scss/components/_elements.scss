@@ -6,6 +6,7 @@
 @import 'table';
 @import 'section';
 @import 'button';
+@import 'colors';
 
 %elements {
   @extend %inline;
@@ -16,4 +17,5 @@
   @extend %table;
   @extend %section;
   @extend %button;
+  @extend %colors;
 }

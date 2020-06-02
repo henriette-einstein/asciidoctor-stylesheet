@@ -35,7 +35,7 @@ combinations are defined in the stylesheet
 == Social Colors
 There are several social media sites that define a specific color for their service. The following colors are supported
 
-color-github:: The color of https://github.com[Github]
-color-twitter:: The color of https://twitter.com[Twitter]
-color-facebook:: The color of https://facebook.com[Facebook]
-color-linkedin:: The color of https://linkedin.com[LinkedIn]
+* color-github
+* color-twitter
+* color-facebook
+* color-linkedin

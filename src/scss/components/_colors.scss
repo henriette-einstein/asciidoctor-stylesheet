@@ -1,0 +1,51 @@
+@mixin colordef($name, $color) {
+  .color-#{$name} {
+    color: #{$color};
+  }
+  .bg-#{$name} {
+    background-color: #{$color};
+  }
+}
+
+%colors {
+  // Standard colors
+  @include colordef(whitek, white);
+  @include colordef(light-black, $color-light-black);
+  @include colordef(smoke, $color-smoke);
+  @include colordef(light-gray, $color-light-gray);
+  @include colordef(medium-gray, $color-medium-gray);
+  @include colordef(dark-gray, $color-dark-gray);
+  @include colordef(darkest-gray, $color-darkest-gray);
+
+  // ANSI colors
+  @include colordef(ansi-red, $color-ansi-red);
+  @include colordef(ansi-orange, $color-ansi-orange);
+  @include colordef(ansi-orange, $color-ansi-yellow);
+  @include colordef(ansi-green, $color-ansi-green);
+  @include colordef(ansi-orange, $color-ansi-blue);
+
+  // Social colors
+  @include colordef(twitter, $color-twitter);
+  @include colordef(facebook, $color-facebook);
+  @include colordef(google, $color-google);
+  @include colordef(linkedin, $color-linkedin);
+  @include colordef(pinterest, $color-pinterest);
+  @include colordef(github, $color-github);
+  @include colordef(youtube, $color-youtube);
+  @include colordef(instagram, $color-instagram);
+
+  // Pantone Colors
+  @include colordef(pantone-classic-blue, $pantone-classic-blue);
+  @include colordef(pantone-monument, $pantone-monument);
+  @include colordef(pantone-provence, $pantone-provence);
+  @include colordef(pantone-baby-blue, $pantone-baby-blue);
+  @include colordef(pantone-peach-quartz, $pantone-peach-quartz);
+  @include colordef(pantone-cornhusk, $pantone-cornhusk);
+
+  .color-heading {
+    color: $color-heading;
+  }
+  .bg-heading {
+    background-color: $color-heading;
+  }
+}

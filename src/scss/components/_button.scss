@@ -24,8 +24,18 @@ $btn-icon-size-lg: 3.6rem !default;
 $padding-btn-vertical: 11px !default;
 $padding-btn-horizontal: 22px !default;
 
+$padding-large-vertical: 15px !default;
+$padding-large-horizontal: 48px !default;
+
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 15px !default;
+
 $default-color: #888888 !default;
 $default-states-color: lighten($default-color, 6%) !default;
+
+$font-size-small: 0.8571em !default;
+$font-size-base: 14px !default;
+$font-size-large: 1em !default;
 
 %button {
   .btn-base,
@@ -108,5 +118,22 @@ $default-states-color: lighten($default-color, 6%) !default;
       position: relative;
       top: 1px;
     }
+  }
+
+  .btn-lg {
+    @include btn-size(
+      $padding-large-vertical,
+      $padding-large-horizontal,
+      $font-size-large,
+      $border-radius-large
+    );
+  }
+  .btn-sm {
+    @include btn-size(
+      $padding-small-vertical,
+      $padding-small-horizontal,
+      $font-size-base,
+      $border-radius-small
+    );
   }
 }

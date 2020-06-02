@@ -216,24 +216,27 @@ $panel-padding: calculateRem(20) !default;
       }
 
       .icon-note::before {
-        @include svg-before('../svg/info-circle.svg', $ansi-blue);
+        @include svg-before('../svg/info-circle.svg', $color-ansi-blue);
       }
 
       .icon-tip:before {
-        @include svg-before('../svg/lightbulb.svg', $ansi-green);
+        @include svg-before('../svg/lightbulb.svg', $color-ansi-green);
       }
 
       .icon-warning:before {
-        @include svg-before('../svg/exclamation-triangle.svg', $ansi-orange);
+        @include svg-before(
+          '../svg/exclamation-triangle.svg',
+          $color-ansi-orange
+        );
         color: #bf6900;
       }
 
       .icon-caution:before {
-        @include svg-before('../svg/hand-paper.svg', $ansi-yellow);
+        @include svg-before('../svg/hand-paper.svg', $color-ansi-yellow);
       }
 
       .icon-important:before {
-        @include svg-before('../svg/exclamation-circle.svg', $ansi-red);
+        @include svg-before('../svg/exclamation-circle.svg', $color-ansi-red);
       }
     }
 
