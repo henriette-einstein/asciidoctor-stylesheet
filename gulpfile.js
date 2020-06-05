@@ -57,7 +57,7 @@ function docTask (cb) {
       attributes: {
         linkcss: '',
         stylesheet: 'asciidoctor.css',
-        stylesdir: './'
+        stylesdir: '/'
       }
     }).on('error', log.error))
     .pipe(gulp.dest(DEST))

@@ -1,15 +1,15 @@
 @mixin colordef($name, $color) {
-  .color-#{$name} {
+  .color-#{'' + $name} {
     color: #{$color};
   }
-  .bg-#{$name} {
+  .bg-#{'' + $name} {
     background-color: #{$color};
   }
 }
 
 %colors {
   // Standard colors
-  @include colordef(whitek, white);
+  @include colordef(white, white);
   @include colordef(light-black, $color-light-black);
   @include colordef(smoke, $color-smoke);
   @include colordef(light-gray, $color-light-gray);
@@ -20,9 +20,9 @@
   // ANSI colors
   @include colordef(ansi-red, $color-ansi-red);
   @include colordef(ansi-orange, $color-ansi-orange);
-  @include colordef(ansi-orange, $color-ansi-yellow);
+  @include colordef(ansi-yellow, $color-ansi-yellow);
   @include colordef(ansi-green, $color-ansi-green);
-  @include colordef(ansi-orange, $color-ansi-blue);
+  @include colordef(ansi-blue, $color-ansi-blue);
 
   // Social colors
   @include colordef(twitter, $color-twitter);
@@ -42,10 +42,9 @@
   @include colordef(pantone-peach-quartz, $pantone-peach-quartz);
   @include colordef(pantone-cornhusk, $pantone-cornhusk);
 
-  .color-heading {
-    color: $color-heading;
-  }
-  .bg-heading {
-    background-color: $color-heading;
-  }
+  // Text colors
+  @include colordef(title, $color-title);
+  @include colordef(blocktitle, $color-blocktitle);
+  @include colordef(heading, $color-heading);
+  @include colordef(link, $color-link);
 }

@@ -1,0 +1,90 @@
+= Stylesheet Colors
+:toc:
+
+== Overview
+This Asciidoctor stylesheet defines a set of colors that are used in various parts of the stylesheet. Besides that, it defines useful color combinations of foreground and background colors. For both colors and color combinations the stylesheet implements class selectors that can be used to color the output. Some of the colors and color combinations can be customized via SASS and CSS custom properties.
+
+For every defined color two class-selectors "color-"<name of the color> and "bg-"<name of the color> are implemented. For example
+
+.Class-selectors for the color color-ansi-red
+----
+.color-ansi-red {
+  color: $color-ansi-red;
+}
+.bg-ansi-red {
+  background-color: $color-ansi-red;
+}
+----
+
+
+== Predefined Colors
+The following colors are predefined by the stylesheet and canot be changed via configuration.
+
+=== Standard Colors
+
+* color-white
+* color-black
+* color-lightest-gray
+* color-light-gray
+* color-medium-gray
+* color-dark-gray
+* color-darkest-gray
+
+=== Pantone Colors
+The stylesheet defines and uses colors belonging to the Pantone colors of the year 2020.
+
+* color-pantone-classic-blue - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Classic Blue].
+* color-pantone-monument - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Monument].
+* color-pantone-provence - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Provence].
+* color-pantone-baby-blue  - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Baby Blue].
+* color-pantone-stucco  - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Stucco].
+* color-pantone-peach-quartz  - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Peach Quartz].
+* color-pantone-cornhusk  - https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Cornhusk].
+
+=== ANSI Z535 Colors
+The stylesheet defines nd uses colors defined by the ANSI Z535 standard.
+
+* color-ansi-red - Red as defined by ANSI Z535. 
+* color-ansi-orange - Orange as defined by ANSI Z535.
+* color-ansi-yellow - Yellow as defined by ANSI Z535.
+* color-ansi-green - Green as defined by ANSI Z535.
+* color-ansi-blue - Blue as defined by ANSI Z535.
+* color-ansi-purple - Purple as defined by ANSI Z535.
+
+=== Social Colors
+The stylesheet defines and uses colors that are used by social media sites. he following colors are supported:
+
+* color-facebook
+* color-github
+* color-google
+* color-instagram
+* color-linkedin
+* color-pinterest
+* color-twitter
+* color-youtube
+
+=== Standard Text Colors
+
+* color-default the default color used for text rendering
+* color-title the color used to render the title
+* color-heading the color used by the section headings
+* color-blocktitle the color used to format the blocktitle
+
+
+== Color-Combinations
+
+=== ANSI Z535 Color Combinations
+
+Ansi Z535 also defines which combination of background and foreground colors have to be used in signal panels. The following
+combinations are defined in the stylesheet
+
+|===
+| Name | Foreground | Background
+
+| cc-ansi-danger | white | color-ansi-red
+| cc-ansi-warning | black | color-ansi-orange
+| cc-ansi-caution | black | color-ansi-yellow
+| cc-ansi-notice | white | color-ansi-blue
+| cc-ansi-safety | white | color-ansi-green
+
+|===

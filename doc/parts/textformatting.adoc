@@ -1,0 +1,122 @@
+= Text Formatting
+
+This section shows how text can be formatted with Asciidoctor.
+
+== Inline Text Formatting
+
+[#basic]
+=== Basic Inline Text Formatting
+
+This is a paragraph of regular text. +
+This is a paragraph with a *bold* word and an _italicized_ word. *_Bold italic_* is also possible. +
+Words can also have internal b**ol**d and it__ali__c formatting. +
+Some constrained `monospace text`, and some ``u``nconstrained ``m``onospace ``t``ext. +
+Some Superscript^®^ text and some subscript text: H~2~O. +
+This paragraph contains a #mark#.
+
+=== Replacements
+
+* copyright: (C)
+* registered trademark: (R)
+* trademark: (TM)
+* em dash (between words): --
+* ellipses: ...
+* arrows: -> => <- <=
+* apostrophe: Sam's
+* XML numerical entity (e.g., dagger): &#8224;
+
+=== Links
+
+The text at the end of this sentence is cross referenced to <<basic,Basic Inline Text Formatting>>
+
+This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual^].
+
+This is an attribute reference {quick-uri}[which links this text to the Asciidoctor Quick Reference Guide^].
+
+=== Icons
+Text in Acsiidoctor may contain icons but only if font-icons are used. This can be configured in any Asciidoctor document with the the flag 'icons: font'. Here are some examples of icons
+
+* icon:twitter[] Twitter icon
+* icon:facebook[] Facebook icon
+* icon:github[] Github icon
+* icon:linkedin[] LinkedIn icon
+* icon:pinterest[] Pinterest icon
+* icon:google[] Google icon
+* icon:youtube[] Youtube icon
+* icon:instagram[] Instagram icon
+
+.An icon can be displayed in different sizes
+----
+icon:twitter[size=1x]
+icon:twitter[size=2x]
+icon:twitter[size=3x]
+icon:twitter[size=4x]
+icon:twitter[size=5x]
+icon:twitter[size=lg]
+icon:twitter[size=fw]
+----
+
+icon:twitter[size=1x]
+icon:twitter[size=2x]
+icon:twitter[size=3x]
+icon:twitter[size=4x]
+icon:twitter[size=5x]
+icon:twitter[size=lg]
+icon:twitter[size=fw]
+
+Icons may be rotated.
+
+.An icon can be rotated
+----
+icon:twitter[]
+icon:twitter[rotate=90]
+icon:twitter[rotate=180]
+icon:twitter[rotate=270]
+----
+
+icon:twitter[size=5x]
+icon:twitter[rotate=90, size=5x]
+icon:twitter[rotate=180, size=5x]
+icon:twitter[rotate=270, size=5x]
+
+Last but not least, icons can also be flipped horizontally or vertically
+
+.An icon can be flipped
+----
+icon:twitter[flip=horizontal]
+icon:twitter[flip=vertical]
+----
+
+icon:twitter[flip=horizontal, size=5x]
+icon:twitter[flip=vertical, size=5x]
+
+== Paragraph Formatting
+
+=== Set Paragraph Alignment
+A paragraph can be aligned by setting one of the roles "text-left", "text-right", "text-center" or "text-justify".
+
+.Align text-left
+[.text-left]
+This text is left-aligned. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+.Align text-right
+[.text-right]
+This text is right-aligned. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+.Align text-center
+[.text-center]
+This text is center-aligned. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+.Align text-justify
+[.text-justify]
+This text is justify-aligned. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+=== Line breaks
+
+This line has a line break at the end of the line +
+followed by a new line
+
+[%hardbreaks]
+These two lines are using the %hardbreak option
+to prevent concatination of lines
+

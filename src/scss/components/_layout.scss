@@ -174,7 +174,8 @@
         right: 0;
       }
     }
-    #{$toc-selector} {
+    #{$toc-selector} &.toc-left,
+    #{$toc-selector} &.toc-right {
       background: $panel-bg;
       #{$toctitle-selector} {
         margin-top: 0;
@@ -208,7 +209,8 @@
     &.toc-right {
       padding-right: 20em;
     }
-    #{$toc-selector} {
+    #{$toc-selector} &.toc-left,
+    #{$toc-selector} &.toc-right {
       width: 20em;
       > ul {
         font-size: 0.95em;

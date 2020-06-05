@@ -1,3 +1,4 @@
+@import 'classes';
 @import 'inline';
 @import 'blocks';
 @import 'paragraph';
@@ -9,6 +10,7 @@
 @import 'colors';
 
 %elements {
+  @extend %size-classes;
   @extend %inline;
   @extend %blocks;
   @extend %paragraph;

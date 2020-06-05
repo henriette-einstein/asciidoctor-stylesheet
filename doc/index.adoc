@@ -2,23 +2,18 @@
 Armin Pfarr <arp@henriette-einstein.com>
 :toc: left
 
-
-== Overview
-This project implements a CSS stylesheet for Asciidoctor.
-
-link:sample{outfilesuffix}[Example document]
-
-== Requirements
-
-include::_requirements.adoc[leveloffset=1]
+This project is an attempt to implements a CSS stylesheet for Asciidoctor. It implements the features of the original stylesheet and adds some classes for additional features. The stylesheet can be configured both via SASS and with CSS custom properties. 
+Please look at the link:requirements{outfilesuffix}[requirements] for more details.
 
 == Features
 
-link:features{outfilesuffix}[Features]
-
+link:features-standard{outfilesuffix}[Standard Asciidoctor Features]
 
 == Additional features
 
+* Customizable fonts
+* link:parts/colors{outfilesuffix}[Customizable colors]
+* link:parts/textformatting-ext{outfilesuffix}[Additional Features for Text Formatting]
 * Support for CSSgram
 * Support for HTML Flex
 * Support for Cards

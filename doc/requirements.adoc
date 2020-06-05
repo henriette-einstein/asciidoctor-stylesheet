@@ -1,0 +1,36 @@
+= Requirements
+
+== Non-functional requirements
+
+* The stylesheets must be free to use for all
+* The stylesheets must not define any additional software requirements
+** The stylesheets must be pure CSS
+** The stylesheets must not use any Javascript
+** The stylesheets must not use any stylesheet library (e.g. Foundation)
+* The stylesheets must be delivered in one single CSS file
+** The stylesheets must be delivered in a non-minimized version for debugging
+** The stylesheets must be delivered in a minimized version for production
+* The stylesheets must be acessible from a server in the internet
+
+== Functional requirements
+
+=== Scope
+
+* The stylesheets must implememt all features of the default HTML output of Asciidoctor
+** The stylesheets must implement rules for all elements and classes used or defined by the Asciidoctor HTML converter
+* The stylesheets must be usable as a replacement for the existing Asciidoctor default style
+* The stylesheets must not rely on any Asciidoctor custom converter
+
+=== Print
+
+* The stylesheet must implement customizable @page rules
+* The stylesheet must implement rules for facing pages
+** The facing page settings must be configurable
+* The stylesheet must implemement rules for orphans and widows
+* The stylesheet must implement page-break rules
+** The page-break rule for sections of level 1 and 2 must be configurable
+
+=== Customization
+
+* The stylesheet must be customizable via SASS
+* The stylesheets must be customizable via CSS custom properties

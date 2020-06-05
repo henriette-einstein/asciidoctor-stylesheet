@@ -1,0 +1,116 @@
+= Additional Features for Text Formatting
+:icons: font
+
+The stylesheet implements additional classes and styles for text formatting.
+
+== Inline Text Formatting
+
+=== Set Textcolor of Inline Text
+To color parts of a paragraph use the syntax
+
+----
+This paragraph contains [.color-ansi-red]#words in ANSI red#.
+----
+`.color-ansi-red` can be replaced by any other defined color.
+
+This paragraph contains [.color-ansi-red]#words in ANSI red#. +
+This paragraph contains [.color-ansi-orange]#words in ANSI orange#. +
+This paragraph contains [.color-ansi-yellow]#words in ANSI orange#. +
+This paragraph contains [.color-ansi-blue]#words in ANSI blue#. +
+This paragraph contains [.color-ansi-green]#words in ANSI green#. 
+
+This paragraph contains [.color-heading]#words in the color of the section headings#. +
+This paragraph contains [.color-title]#words in the color of the document titles#. +
+This paragraph contains [.color-blocktitle]#words in the color of the block titles#. +
+This paragraph contains [.color-link]#words in the color of links#. +
+
+=== Set Background-Color of Inline Text
+To color the background of parts of a paragraph use the syntax
+
+----
+This paragraph contains [.bg-ansi-yellow]#words with an ANSI yellow background#.
+----
+`.bg-ansi-yellow` can be replaced by any other defined background color.
+
+This paragraph contains [.bg-ansi-yellow]#words with an ANSI yellow background#.
+
+=== Set Text- and Background-Color of Inline Text
+To set both thecolor and the background-color of parts of a paragraph use the syntax
+
+----
+This paragraph contains [.bg-ansi-blue .color-white]#words with an ANSI blue background and a textcolor white#.
+----
+`.bg-ansi-yellow` can be replaced by any other defined background color.
+
+This paragraph contains [.bg-ansi-blue .color-white]#words with an ANSI blue background and a textcolor white#.
+
+NOTE: Setting the text- and background-colors of an inline text also works in combination with *bold*. +
+This paragraph contains [.bg-ansi-blue .color-white]*bold words with an ANSI blue background and a textcolor white*.
+
+=== Set Icon Color
+Icons can be colored using the predefined color roles.
+
+.An icon can be colored
+----
+icon:twitter[role=color-twitter]
+icon:twitter[role=color-ansi-red]
+----
+
+icon:twitter[role=color-twitter, size=5x]
+icon:twitter[role=color-ansi-red, size=5x]
+
+== Paragraph Formatting
+
+=== Set Size of Paragraph
+A Paragraph can be formatted in pre-defined sizes. The following sizes are supported
+
+* size-xs: extra small
+* size-s: small
+* size-m: medium
+* size-l: large
+* size-xl: extra large
+
+To use these sizes, just set the prdifined role.
+
+----
+[.size-l]
+This is a paragraph formatted with size *large*
+----
+
+[.size-xs]
+This is a paragraph formatted with size *extra small*
+[.size-s]
+This is a paragraph formatted with size *small*
+[.size-m]
+This is a paragraph formatted with size *medium*
+[.size-l]
+This is a paragraph formatted with size *large*
+[.size-xl]
+This is a paragraph formatted with size *extra large*
+
+=== Set Colors of Paragraph
+A complete paragraph can be colored by setting one of the predefined color roles. Here are some examples:
+
+.Color color-ansi-red
+[.color-ansi-red]
+This text is written in the color *color-ansi-red*. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+.Color color-twitter
+[.color-twitter]
+This text is written in the color *color-twitter*. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+.Color color-heading
+[.color-heading]
+This text is written in the color *color-heading*. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
+
+Like with inline text, the background of paragraphs can also be set with the syntax
+
+----
+[.bg-heading.color-white]
+This text is written in the color *white* and background-color set to *color-heading*.
+----
+
+[.bg-heading.color-white]
+This text is written in the color *white* and background-color set to *color-heading*.
+
+NOTE: Not all of these colors are usefull for formatting text.

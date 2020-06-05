@@ -1,0 +1,91 @@
+= Standard Asciidoctor Stylesheet Features
+:icons: font
+:quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+
+
+
+include::parts/textformatting.adoc[leveloffset=1]
+
+== Sections
+
+=== Section Level 2
+
+==== Section Level 3
+
+===== Section Level 4
+
+====== Section Level 5
+
+== Blocks
+
+=== Image Blocks
+
+
+
+=== URL's and Links
+
+.A URL with an icon
+----
+icon:facebook[link="https://facebook.com"]
+----
+
+Visit us on icon:facebook[link="https://facebook.com"]
+
+
+=== Buttons
+Asciidoctor does not recognize button elements. However, link elements can be displayed as buttons by adding the class ".btn".
+
+.A link displayed as a button
+----
+https://github.com/asciidoctor[Asciidoctor, role=btn]
+----
+
+The result is a button: 
+
+https://github.com/asciidoctor[Asciidoctor, role=btn]
+
+Buttons can be used in 2 more sizes by adding the additional roles 
+
+* .btn-sm for small buttons
+* .btn-lg for large buttons
+
+.A button displayed in different sizes
+----
+https://github.com/asciidoctor[Asciidoctor, role="btn btn-sm"]
+https://github.com/asciidoctor[Asciidoctor, role=btn]
+https://github.com/asciidoctor[Asciidoctor, role="btn btn-lg"]
+----
+
+https://github.com/asciidoctor[Asciidoctor role=btn btn-sm, role="btn btn-sm"]
+https://github.com/asciidoctor[Asciidoctor role=btn, role="btn"]
+https://github.com/asciidoctor[Asciidoctor role=btn btn-lg, role="btn btn-lg"]
+
+.A button displayed in different background-colors 
+----
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Classic Blue, role="btn bg-pantone-classic-blue"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Monument, role="btn bg-pantone-monument"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Provence, role="btn bg-pantone-provence"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Byby Blue, role="btn bg-pantone-baby-blue"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Peach Quartz, role="btn bg-pantone-peach-quartz"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Cornhusk, role="btn bg-pantone-cornhusk"]
+----
+
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Classic Blue, role="btn bg-pantone-classic-blue"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Monument, role="btn bg-pantone-monument"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Provence, role="btn bg-pantone-provence"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Byby Blue, role="btn bg-pantone-baby-blue"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Peach Quartz, role="btn bg-pantone-peach-quartz"]
+https://store.pantone.com/de/de/color-of-the-year-2020-paletten[Pantone Cornhusk, role="btn bg-pantone-cornhusk"]
+
+
+== Block level elements
+
+=== Horizontal lines
+
+=== Lists
+
+=== Tables
+
+
+
+
