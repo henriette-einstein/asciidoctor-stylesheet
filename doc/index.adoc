@@ -14,7 +14,8 @@ link:features-standard{outfilesuffix}[Standard Asciidoctor Features]
 * Customizable fonts
 * link:parts/colors{outfilesuffix}[Customizable colors]
 * link:parts/textformatting-ext{outfilesuffix}[Additional Features for Text Formatting]
-* Support for CSSgram
+* link:parts/buttons{outfilesuffix}[Buttons]
+* link:parts/cssgram{outfilesuffix}[Instagramm-like filters]
 * Support for HTML Flex
 * Support for Cards
 

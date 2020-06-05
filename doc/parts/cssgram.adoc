@@ -1,4 +1,6 @@
-== CSSgram
+= CSSgram
+:imagesdir: ../resources
+
 Thanks to the https://una.im/CSSgram[CSSgram] library you can use Instagram-like filters in your Asciidoctor document by simply adding a role to an imageblock.
 
 WARNING: This filters are not supported by most PDF renderers and therefore apply only when rendered on a screen.
@@ -9,7 +11,7 @@ WARNING: This filters are not supported by most PDF renderers and therefore appl
 ----
 .Image with role "insta-aden"
 [.insta-aden]
-image::resources/frenchbull-small.jpg[insta-aden]
+image::/frenchbull-small.jpg[insta-aden]
 ----
 
 .Supported roles
@@ -42,120 +44,119 @@ image::resources/frenchbull-small.jpg[insta-aden]
 ====
 
 .Results
-[%collapsible]
 ====
 Here are results
 
 .Original Image with no role
-image::resources/frenchbull.jpg[French Bull]
+image::frenchbull.jpg[French Bull]
 
 [role=flex]
 --
 
 .Image with role "insta-1977"
 [.insta-1977]
-image::resources/frenchbull-small.jpg[insta-1977]
+image::frenchbull-small.jpg[insta-1977]
 
 .Image with role "insta-aden"
 [.insta-aden]
-image::resources/frenchbull-small.jpg[insta-aden]
+image::frenchbull-small.jpg[insta-aden]
 
 .Image with role "insta-brannan"
 [.insta-brannan]
-image::resources/frenchbull-small.jpg[insta-brannan]
+image::frenchbull-small.jpg[insta-brannan]
 
 .Image with role "insta-brooklyn"
 [.insta-brooklyn]
-image::resources/frenchbull-small.jpg[insta-brooklyn]
+image::frenchbull-small.jpg[insta-brooklyn]
 
 .Image with role "insta-clarendon"
 [.insta-clarendon]
-image::resources/frenchbull-small.jpg[insta-clarendon]
+image::frenchbull-small.jpg[insta-clarendon]
 
 .Image with role "insta-earlybird"
 [.insta-earlybird]
-image::resources/frenchbull-small.jpg[insta-earlybird]
+image::frenchbull-small.jpg[insta-earlybird]
 
 .Image with role "insta-gingham"
 [.insta-gingham]
-image::resources/frenchbull-small.jpg[insta-gingham]
+image::frenchbull-small.jpg[insta-gingham]
 
 .Image with role "insta-hudson"
 [.insta-hudson]
-image::resources/frenchbull-small.jpg[insta-hudson]
+image::frenchbull-small.jpg[insta-hudson]
 
 .Image with role "insta-inkwell"
 [.insta-inkwell]
-image::resources/frenchbull-small.jpg[insta-inkwell]
+image::frenchbull-small.jpg[insta-inkwell]
 
 .Image with role "insta-kelvin"
 [.insta-kelvin]
-image::resources/frenchbull-small.jpg[insta-kelvin]
+image::frenchbull-small.jpg[insta-kelvin]
 
 .Image with role "insta-lark"
 [.insta-lark]
-image::resources/frenchbull-small.jpg[insta-lark]
+image::frenchbull-small.jpg[insta-lark]
 
 .Image with role "insta-lofi"
 [.insta-lofi]
-image::resources/frenchbull-small.jpg[insta-lofi]
+image::frenchbull-small.jpg[insta-lofi]
 
 .Image with role "insta-maven"
 [.insta-maven]
-image::resources/frenchbull-small.jpg[insta-maven]
+image::frenchbull-small.jpg[insta-maven]
 
 .Image with role "insta-mayfair"
 [.insta-mayfair]
-image::resources/frenchbull-small.jpg[insta-mayfair]
+image::frenchbull-small.jpg[insta-mayfair]
 
 .Image with role "insta-moon"
 [.insta-moon]
-image::resources/frenchbull-small.jpg[insta-moon]
+image::frenchbull-small.jpg[insta-moon]
 
 .Image with role "insta-nashville"
 [.insta-nashville]
-image::resources/frenchbull-small.jpg[insta-nashville]
+image::frenchbull-small.jpg[insta-nashville]
 
 .Image with role "insta-perpetua"
 [.insta-perpetua]
-image::resources/frenchbull-small.jpg[insta-perpetua]
+image::frenchbull-small.jpg[insta-perpetua]
 
 .Image with role "insta-reyes"
 [.insta-reyes]
-image::resources/frenchbull-small.jpg[insta-reyes]
+image::frenchbull-small.jpg[insta-reyes]
 
 .Image with role "insta-rise"
 [.insta-rise]
-image::resources/frenchbull-small.jpg[insta-rise]
+image::frenchbull-small.jpg[insta-rise]
 
 .Image with role "insta-slumber"
 [.insta-slumber]
-image::resources/frenchbull-small.jpg[insta-slumber]
+image::frenchbull-small.jpg[insta-slumber]
 
 .Image with role "insta-stinson"
 [.insta-stinson]
-image::resources/frenchbull-small.jpg[insta-stinson]
+image::frenchbull-small.jpg[insta-stinson]
 
 
 .Image with role "insta-toaster"
 [.insta-toaster]
-image::resources/frenchbull-small.jpg[insta-toaster]
+image::frenchbull-small.jpg[insta-toaster]
 
 .Image with role "insta-valencia"
 [.insta-valencia]
-image::resources/frenchbull-small.jpg[insta-valencia]
+image::frenchbull-small.jpg[insta-valencia]
 
 .Image with role "insta-walden"
 [.insta-walden]
-image::resources/frenchbull-small.jpg[insta-walden]
+image::frenchbull-small.jpg[insta-walden]
 
 .Image with role "insta-willow"
 [.insta-willow]
-image::resources/frenchbull-small.jpg[insta-willow]
+image::frenchbull-small.jpg[insta-willow]
 
 .Image with role "insta-xpro2"
 [.insta-xpro2]
-image::resources/frenchbull-small.jpg[insta-xpro2]
+image::frenchbull-small.jpg[insta-xpro2]
 
 --
 

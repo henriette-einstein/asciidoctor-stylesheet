@@ -90,6 +90,14 @@ icon:twitter[flip=vertical]
 icon:twitter[flip=horizontal, size=5x]
 icon:twitter[flip=vertical, size=5x]
 
+.An icon can have a link
+----
+icon:facebook[link="https://facebook.com"]
+----
+
+Visit us on icon:facebook[link="https://facebook.com"]
+
+
 == Paragraph Formatting
 
 === Set Paragraph Alignment

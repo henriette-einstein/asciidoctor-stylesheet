@@ -1,5 +1,5 @@
 = Stylesheet Colors
-:toc:
+:toc: left
 
 == Overview
 This Asciidoctor stylesheet defines a set of colors that are used in various parts of the stylesheet. Besides that, it defines useful color combinations of foreground and background colors. For both colors and color combinations the stylesheet implements class selectors that can be used to color the output. Some of the colors and color combinations can be customized via SASS and CSS custom properties.

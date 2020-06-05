@@ -101,9 +101,6 @@ These are four horizontal rules written with Markdown syntax
 .Image caption
 image::resources/picture.jpg[This is the image alt text.]
 
-=== Use Instagramm-like filters
-
-include::cssgram.adoc[leveloffset=2]
 
 == Footnotes
 

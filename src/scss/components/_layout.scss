@@ -174,31 +174,33 @@
         right: 0;
       }
     }
-    #{$toc-selector} &.toc-left,
-    #{$toc-selector} &.toc-right {
-      background: $panel-bg;
-      #{$toctitle-selector} {
-        margin-top: 0;
-        margin-bottom: 0.8rem;
-        font-size: 1.2em;
-      }
-      margin-top: 0 !important;
-      margin: 0;
-      position: fixed;
-      z-index: 1000;
-      height: 100%;
-      overflow: auto;
-      padding: 1.25em 1em;
-      left: 0;
-      top: 0;
-      width: 15em;
-      > ul {
-        font-size: 0.9em;
-        margin-bottom: 0;
-      }
-      ul ul {
+    &.toc-left,
+    &toc-right {
+      #{$toc-selector} {
+        background: $panel-bg;
+        #{$toctitle-selector} {
+          margin-top: 0;
+          margin-bottom: 0.8rem;
+          font-size: 1.2em;
+        }
+        margin-top: 0 !important;
         margin: 0;
-        padding-left: $list-nested-side-margin * 0.8;
+        position: fixed;
+        z-index: 1000;
+        height: 100%;
+        overflow: auto;
+        padding: 1.25em 1em;
+        left: 0;
+        top: 0;
+        width: 15em;
+        > ul {
+          font-size: 0.9em;
+          margin-bottom: 0;
+        }
+        ul ul {
+          margin: 0;
+          padding-left: $list-nested-side-margin * 0.8;
+        }
       }
     }
   }
@@ -209,14 +211,16 @@
     &.toc-right {
       padding-right: 20em;
     }
-    #{$toc-selector} &.toc-left,
-    #{$toc-selector} &.toc-right {
-      width: 20em;
-      > ul {
-        font-size: 0.95em;
-      }
-      ul ul {
-        padding-left: $list-nested-side-margin;
+    &.toc-left,
+    & toc-right {
+      #{$toc-selector} {
+        width: 20em;
+        > ul {
+          font-size: 0.95em;
+        }
+        ul ul {
+          padding-left: $list-nested-side-margin;
+        }
       }
     }
   }

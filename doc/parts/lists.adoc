@@ -1,0 +1,88 @@
+= Lists
+
+== Unordered lists
+
+.Unordered list title
+* list item 1
+** nested list item
+*** nested nested list item 1
+*** nested nested list item 2
+* list item 2
+
+== Ordered lists
+
+.Ordered list title
+. ordered list item
+.. nested ordered list item
+. ordered list item
+.. second level list item
+... third level list item
+... another third level list item
+... a final third level list item
+.. another second level list item
+
+You can override the number scheme for any level by setting its style (the first positional entry in a block attribute list). You can also set the starting number using the start attribute:
+
+["lowerroman", start=5]
+. Five
+. Six
+[loweralpha]
+.. a
+.. b
+.. c
+. Seven
+
+== Labelled lists
+
+Here's an example of a labeled list that identifies parts of a computer:
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+.A horizontal labelled list
+[horizontal]
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+.Labelled list with bullets
+Diary::
+* Milk
+* Eggs
+Bakery::
+* Bread
+Produce::
+* Bananas
+
+== Mixed lists
+
+.Mixed unordered and ordered lists
+. Linux
+* Fedora
+* Ubuntu
+* Slackware
+. BSD
+* FreeBSD
+* NetBSD
+
+Here’s a list that mixes all three types of lists:
+
+Operating Systems::
+  . Linux
+    * Fedora
+    * Ubuntu
+    * Slackware
+  . BSD
+    * FreeBSD
+    * NetBSD
+Cloud Providers::
+  . PaaS
+    * OpenShift
+    * CloudBees
+  . IaaS
+    * Amazon EC2
+    * Rackspace
